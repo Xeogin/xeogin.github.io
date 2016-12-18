@@ -1,0 +1,25 @@
+"AppState"
+{
+	"appid"		"232370"
+	"Universe"		"1"
+	"name"		"Half-Life 2: Deathmatch Dedicated Server"
+	"StateFlags"		"4"
+	"installdir"		"Half-Life 2 Deathmatch Dedicated Server"
+	"LastUpdated"		"1480878747"
+	"UpdateResult"		"0"
+	"SizeOnDisk"		"742298875"
+	"buildid"		"1083909"
+	"LastOwner"		"76561201878262871"
+	"BytesToDownload"		"312886896"
+	"BytesDownloaded"		"312886896"
+	"AutoUpdateBehavior"		"0"
+	"AllowOtherDownloadsWhileRunning"		"0"
+	"UserConfig"
+	{
+	}
+	"MountedDepots"
+	{
+		"232370"		"1150078031401855542"
+		"232375"		"4031453145417207437"
+	}
+}

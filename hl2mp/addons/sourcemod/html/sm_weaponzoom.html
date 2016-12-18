@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Weapon Zoom Help</title>
+<style>
+body, table, table td
+{
+	font-family: verdana;
+	font-size: 8pt;
+}
+
+h1 {
+	font-size: 10pt;
+}
+h2 {
+	font-size: 9pt;
+}
+
+</style>
+</head>
+<body>
+<h1>Weapon Zoom Help</h2>
+<P>
+Weapon Zoom is a custom, multi-step zoom plugin.  Depending how your Game
+Server Operator has configured the plugin, there will be varying levels of
+zoom and functionality.
+</P>
+<h2>Using Zoom</h2>
+<P>
+By default the 357 has Weapon Zoom Enabled.  Others such as the pistol may also be configured.
+
+<ul>
+<li><B>Zoom In x1</B>: Simply use your alternate attack (attack2) to increase your zoom level.</li>
+<li><B>Zoom Out x1</b>: Hold down your "walk" key (default is "alt") while pressing attack2.</li>
+<li><B>Turn off Zoom:</b> Using Suit zoom while you are zoomed in will unzoom your view completely.</li>
+</ul>
+
+<h2>Custom Binds</h2>
+<P>
+Weapon Zoom also supports console binds for custom key or mouse actions.  
+</P>
+<P>
+These example console commands bind your mouse wheels "up", "down" and "5th button" to zoom in, zoom out, and unzoom.
+</P>
+<pre>
+ bind mwheelup weaponzoom_in
+ bind mwheeldown weaponzoom_out
+ bind mouse5 weaponzoom_unzoom
+</pre>
+
+
+<h2>Settings</h2>
+<P>
+The following settings can be configured by individual players, and is accessible through the Weapon Zoom Settings menu by typing in chat: <code>!settings</code> or <code>!weaponzoom</code>
+</P>
+
+<table width="100%">
+<tr><th>Setting</th><th>Setting help</th></tr>
+<tr><td>Enabled</td><td>Enable or disable weapon zooming</td></tr>
+<tr><td>Maximum Zoom</td><td>Your personal maximum zoom</td></tr>
+<tr><td>Not on attack2</td><td>Disable weapon zoom on "attack2" (alt-fire).</td></tr>
+<tr><td>Hear ICU Sound</td><td>Whether you want to hear the "ICU" sound (when you are being zoomed in on)</td></tr>
+<tr><td>Emit ICU Sound</td><td>Whether you want to emit the "ICU" sound when zooming in on a player.  <i>Only available if the Sysop has compiled the plugin in UNFAIR mode</i></td></tr>
+</table>
+</P>
+<hr>
+<font size="-2">[foo] bar was here</font>
+</body>
+</html>

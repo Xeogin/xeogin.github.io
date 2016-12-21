@@ -1,0 +1,106 @@
+//This file made by asf. aka Javek (Edited by Phil0soph)
+"Resource/UI/SpectatorGUI.res"
+{
+	"SpectatorGUI"
+	{
+		"ControlName"	"Frame"
+		"fieldName"		"SpectatorGUI"
+		"tall"			"480"
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+	}
+	"topbar"
+	{
+		"ControlName"	"Panel"
+		"fieldName"		"topbar"
+		"xpos"			"0"
+		"ypos"			"0"
+		"tall"			"0"
+		"wide"			"640"
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+	}
+	"bottombarblank"
+	{
+		"ControlName"	"Panel"
+		"fieldName"		"bottombarblank"
+		"xpos"			"0"
+		"ypos"			"480"
+		"tall"			"55"
+		"wide"			"640"
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		
+	}
+	"playerlabel"
+	{
+		"ControlName"	"Label"
+		"fieldName"		"playerlabel"
+		"xpos"			"c-165"
+		"ypos"			"443"//390
+		"zpos"			"1000"
+		"wide"			"330"
+		"tall"			"30"
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"textAlignment"	"center"
+		"font"			"SpecBarPlayerLabel"
+	}
+	"bottomblack"
+	{
+		"ControlName"			"ImagePanel"
+		"fieldName"			"bottomblack"
+		"xpos"			"0"
+		"ypos"			"445"
+		"wide"			"4321"
+		"tall"			"25"
+		"visible"			"1"
+		"fillcolor"			"0 0 0 200"
+	}	
+	"DividerBar"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"DividerBar"
+		"xpos"			"r94"
+		"ypos"			"12"
+		"wide"			"1"
+		"tall"			"30"
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"fillcolor"		"BorderBright"
+		"labelText"		""
+		"textAlignment"	"center"
+	}
+	"extrainfo"
+	{
+		"ControlName"	"Label"
+		"fieldName"		"extrainfo"
+		"xpos"			"10"
+		"ypos"			"448"//464
+		"wide"			"350"
+		"tall"			"20"
+		"autoResize"	"1"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		""
+		"textAlignment"	"west"
+		"dulltext"		"0"
+		"brighttext"	"0"
+	}
+}

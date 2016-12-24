@@ -10,26 +10,26 @@ WeaponData
 	"bucket"			"1"
 	"bucket_position"	"0"
 
-	"clip_size"			"15"
+	"clip_size"			"18"
 	"primary_ammo"		"Pistol"
 	"secondary_ammo"	"None"
 
 	"weight"			"2"
-	"item_flags"		"0"
+	"item_flags"			"0"
 	"damage"			"7"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{
 
-		"reload"			"Weapon_Pistol.Reload"
-		"reload_npc"		"Weapon_Pistol.NPC_Reload"
-		"empty"				"Weapon_Pistol.Empty"
-		"single_shot"		"Weapon_Pistol.Single"
+		"reload"		"Weapon_Pistol.Reload"
+		"reload_npc"	"Weapon_Pistol.NPC_Reload"
+		"empty"			"Weapon_Pistol.Empty"
+		"single_shot"	"Weapon_Pistol.Single"
 		"single_shot_npc"	"Weapon_Pistol.NPC_Single"
-		"special1"			"Weapon_Pistol.Special1"
-		"special2"			"Weapon_Pistol.Special2"
-		"burst"				"Weapon_Pistol.Burst"
+		"special1"		"Weapon_Pistol.Special1"
+		"special2"		"Weapon_Pistol.Special2"
+		"burst"			"Weapon_Pistol.Burst"
 	}
 
 	// Weapon Sprite data is loaded by the Client DLL.
@@ -52,8 +52,8 @@ WeaponData
 		}
 		"crosshair"
 		{
-				"font"		"XHAIR_1"
-				"character"	"a"
+				"font"		"Crosshairs"
+				"character"	"Q"
 		}
 		"autoaim"
 		{

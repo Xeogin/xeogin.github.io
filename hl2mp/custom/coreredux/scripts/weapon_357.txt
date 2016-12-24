@@ -47,8 +47,8 @@ WeaponData
 		}
 		"crosshair"
 		{
-				"font"		"XHAIR_1"
-				"character"	"a"
+				"font"		"Crosshairs"
+				"character"	"Q"
 		}
 		"autoaim"
 		{

@@ -1,0 +1,14 @@
+Valid Weapons in HL2DM
+
+weapon_smg1 		(Submachine Gun)
+weapon_shotgun 		(12-Gauge Shotgun)
+weapon_rpg 			(Rocket-Propelled Grenade Launcher)
+weapon_pistol 		(9mm Pistol)
+weapon_physcannon 	(Zero Point Energy Field Manipulator Gun)
+weapon_crowbar 		(Crowbar)
+weapon_frag 		(Fragmentation Grenade)
+weapon_crossbow 	(Crossbow)
+weapon_ar2 			(Overwatch Standard Issue Pulse Rifle)
+weapon_slam 		(SLAM)
+weapon_357 			(357 Magnum)
+weapon_stunstick	(Stunstick)

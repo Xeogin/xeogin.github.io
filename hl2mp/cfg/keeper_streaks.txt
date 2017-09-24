@@ -1,0 +1,380 @@
+// Keeper's Streak Sounds Plugin TXT streak file
+// This is a keeper_streaks.txt streak file to be uploaded on a HL2dm server at hl2dm/cfg/
+// The lastest version of Keeper's Streak Sounds Plugin at the creation of this TXT was v2.3.0.1
+// Check http://forum.tsgk.com/viewtopic.php?t=3930 for newest version of Keeper's Streak Sounds Plugin
+// TXT Generated the September 18, 2017 at 08:46:12 CEST
+
+"SOUNDS"
+{
+	"DOMINATING"
+	{
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a is doing well"
+		"sound"		"vo/ravenholm/firetrap_welldone.wav"
+		"streak"	"4"
+	}
+	"RAMPAGE"
+	{
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a is doing excellent"
+		"sound"		"vo/eli_lab/al_excellent01.wav"
+		"streak"	"6"
+	}
+	"KILLINGSPREE"
+	{
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a is doing fantastic"
+		"sound"		"vo/npc/male01/fantastic02.wav"
+		"streak"	"8"
+	}
+	"MONSTERKILL"
+	{
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"Great Scott %a"
+		"sound"		"vo/trainyard/kl_morewarn01.wav"
+		"streak"	"11"
+	}
+	"UNSTOPPABLE"
+	{
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a keeps getting better!"
+		"sound"		"vo/ravenholm/cartrap_better.wav"
+		"streak"	"14"
+	}
+	"ULTRAKILL"
+	{
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a has gotten my satisfaction"
+		"sound"		"vo/npc/vortigaunt/satisfaction.wav"
+		"streak"	"16"
+	}
+	"GODLIKE"
+	{
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"My goodness %a!"
+		"sound"		"vo/k_lab/kl_mygoodness01.wav"
+		"streak"	"18"
+	}
+	"WICKEDSICK"
+	{
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a has stirred up Hell!"
+		"sound"		"vo/ravenholm/shotgun_stirreduphell.wav"
+		"streak"	"20"
+	}
+	//"LUDICROUSKILL"
+	//{
+	//	"type"		"kill"
+	//	"mode"		"1"
+	//	"text"		"%a Ludicrous Kill !!!"
+	//	"sound"		""
+	//	"streak"	"20"
+	//}
+	//"HOLYSHIT"
+	//{
+	//	"type"		"kill"
+	//	"mode"		"1"
+	//	"text"		"HOLY SHIT %a !!!"
+	//	"sound"		""
+	//	"streak"	"24"
+	//}
+	"HEADSHOT"
+	{
+		"eventkey"	"headshot"
+		"type"		"kill"
+		"weapon"	"357"
+		"mode"		"4"
+		"text"		"%a blew a hole through your head"
+		"sound"		""
+		"streak"	"1"
+	}
+	//"HEADSHOT"
+	//{
+	//	"eventkey"	"headshot"
+	//	"type"		"kill"
+	//	"weapon"	"pistol"
+	//	"mode"		"4"
+	//	"text"		"%a poked your eye out!"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
+	//"HEADSHOT"
+	//{
+	//	"eventkey"	"headshot"
+	//	"type"		"kill"
+	//	"weapon"	"shotgun"
+	//	"mode"		"4"
+	//	"text"		"%a blew your head off!"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
+	//"HEADSHOT"
+	//{
+	//	"eventkey"	"headshot"
+	//	"type"		"kill"
+	//	"weapon"	"ar2"
+	//	"mode"		"4"
+	//	"text"		"%a put some holes in your head"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
+	//"HEADSHOT"
+	//{
+	//	"eventkey"	"headshot"
+	//	"type"		"kill"
+	//	"weapon"	"smg1"
+	//	"mode"		"4"
+	//	"text"		"%a put some holes in your head"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
+	"MULTIKILL"
+	{
+		"eventkey"	"multikill2"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a got a double kill"
+		"sound"		"vo/npc/male01/oneforme.wav"
+		"streak"	"1"
+	}
+	//"MULTIKILL"
+	//{
+	//	"eventkey"	"multikill3"
+	//	"type"		"kill"
+	//	"mode"		"1"
+	//	"text"		"%a Triple Kill !!"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
+	//"MULTIKILL"
+	//{
+	//	"eventkey"	"multikill4"
+	//	"type"		"kill"
+	//	"mode"		"1"
+	//	"text"		"%a Quadruple Kill !!"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
+	//"MULTIKILL"
+	//{
+	//	"eventkey"	"multikill5"
+	//	"type"		"kill"
+	//	"mode"		"1"
+	//	"text"		"%a Quintuple Kill !!"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
+	//"MULTIKILL"
+	//{
+	//	"eventkey"	"multikill6"
+	//	"type"		"kill"
+	//	"mode"		"1"
+	//	"text"		"%a Sextuple Kill !!"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
+	//"MULTIKILL"
+	//{
+	//	"eventkey"	"multikill7"
+	//	"type"		"kill"
+	//	"mode"		"1"
+	//	"text"		"%a Septuple Kill !!"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
+	//"MULTIKILL"
+	//{
+	//	"eventkey"	"multikill8"
+	//	"type"		"kill"
+	//	"mode"		"1"
+	//	"text"		"%a Octuple Kill !!"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
+	"JIHAD"
+	{
+		"eventkey"	"jihad"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a Kamikaze"
+		"sound"		""
+		"streak"	"1"
+	}
+	"JIHAD"
+	{
+		"eventkey"	"jihad2"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a Kamikaze X2"
+		"sound"		""
+		"streak"	"1"
+	}
+	"JIHAD"
+	{
+		"eventkey"	"jihad3"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a Kamikaze X3"
+		"sound"		""
+		"streak"	"1"
+	}
+	"JIHAD"
+	{
+		"eventkey"	"jihad4"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a Kamikaze X4"
+		"sound"		""
+		"streak"	"1"
+	}
+	"JIHAD"
+	{
+		"eventkey"	"jihad5"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a Kamikaze X5"
+		"sound"		""
+		"streak"	"1"
+	}
+	"JIHAD"
+	{
+		"eventkey"	"jihad6"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a Kamikaze X6"
+		"sound"		""
+		"streak"	"1"
+	}
+	"JIHAD"
+	{
+		"eventkey"	"jihad7"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a Kamikaze X7"
+		"sound"		""
+		"streak"	"1"
+	}
+	"JIHAD"
+	{
+		"eventkey"	"jihad8"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a Kamikaze X8"
+		"sound"		""
+		"streak"	"1"
+	}
+	"POST_MORTEM"
+	{
+		"eventkey"	"post_mortem"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a Post Mortem"
+		"sound"		""
+		"streak"	"1"
+	}
+	
+	"SIMULTANEOUS"
+	{
+		"eventkey"	"simultaneous"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a and %v Simultaneous Kill"
+		"sound"		""
+		"streak"	"1"
+	}
+	"HUMILIATION"
+	{
+		"eventkey"	"humiliation"
+		"type"		"kill"
+		"weapon"	"weapon_stunstick"
+		"mode"		"1"
+		"text"		"%v was brutally beaten by %a"
+		"sound"		"vo/npc/alyx/brutal02.wav"
+		"streak"	"1"
+	}
+	//	"HUMILIATION"
+	//{
+	//	"eventkey"	"humiliation"
+	//	"type"		"kill"
+	//	"weapon"	"weapon_crowbar"
+	//	"mode"		"1"
+	//	"text"		"%v was brutally beaten by %a"
+	//	"sound"		"vo/npc/alyx/brutal02.wav"
+	//	"streak"	"1"
+	//}
+	"HEADSHOT"
+	{
+		"eventkey"	"headshot"
+		"type"		"death"
+		"weapon"	"357"
+		"streak"	"1"
+	}
+	"HEADSHOT"
+	{
+		"eventkey"	"headshot"
+		"type"		"death"
+		"weapon"	"pistol"
+		"streak"	"1"
+	}
+	"HEADSHOT"
+	{
+		"eventkey"	"headshot"
+		"type"		"death"
+		"weapon"	"shotgun"
+		"streak"	"1"
+	}
+	"HEADSHOT"
+	{
+		"eventkey"	"headshot"
+		"type"		"death"
+		"weapon"	"ar2"
+		"streak"	"1"
+	}
+	"HEADSHOT"
+	{
+		"eventkey"	"headshot"
+		"type"		"death"
+		"weapon"	"smg1"
+		"streak"	"1"
+	}
+	"MULTIKILL"
+	{
+		"eventkey"	"multikill"
+		"type"		"death"
+		"streak"	"1"
+	}
+	"JIHAD"
+	{
+		"eventkey"	"jihad"
+		"type"		"death"
+		"streak"	"1"
+	}
+	"POST_MORTEM"
+	{
+		"eventkey"	"post_mortem"
+		"type"		"death"
+		"streak"	"1"
+	}
+	"HUMILIATION"
+	{
+		"eventkey"	"humiliation"
+		"type"		"death"
+		"weapon"	"weapon_stunstick"
+		"streak"	"1"
+	}
+	//	"HUMILIATION"
+	//{
+	//	"eventkey"	"humiliation"
+	//	"type"		"death"
+	//	"weapon"	"weapon_crowbar
+	//	"streak"	"1"
+	//}
+}

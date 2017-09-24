@@ -4,19 +4,24 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#HL2_Pistol"
-	"viewmodel"			"models/weapons/v_pistol.mdl"
-	"playermodel"		"models/weapons/w_pistol.mdl"
-	"anim_prefix"		"pistol"
-	"bucket"			"1"
-	"bucket_position"	"0"
+	"viewmodel"				"models/weapons/v_pistol.mdl"
+	"playermodel"			"models/weapons/w_pistol.mdl"
+	"anim_prefix"			"pistol"
+	"bucket"				"1"
+	"bucket_position"		"0"
+	"bucket_360"			"0"
+	"bucket_position_360"	"0"
 
-	"clip_size"			"18"
-	"primary_ammo"		"Pistol"
-	"secondary_ammo"	"None"
+	"clip_size"				"18"
+	"primary_ammo"			"Pistol"
+	"secondary_ammo"		"None"
+	"default_clip"			"18"
 
-	"weight"			"2"
-	"item_flags"			"0"
-	"damage"			"7"
+	"weight"				"2"
+	"rumble"				"1"
+	"item_flags"			"32"
+	"damage"				"4"
+	"autoswitchfrom"		"1"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -45,9 +50,14 @@ WeaponData
 				"font"		"WeaponIconsSelected"
 				"character"	"d"
 		}
+		"weapon_small"
+		{
+				"font"		"WeaponIconsSmall"
+				"character"	"d"
+		}
 		"ammo"
 		{
-				"font"		"WeaponIcons"
+				"font"		"WeaponIconsSmall"
 				"character"	"p"
 		}
 		"crosshair"

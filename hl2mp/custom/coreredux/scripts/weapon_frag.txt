@@ -1,33 +1,34 @@
-// 357
-
 WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#HL2_357Handgun"
-	"viewmodel"				"models/weapons/v_357.mdl"
-	"playermodel"			"models/weapons/w_357.mdl"
-	"anim_prefix"			"python"
-	"bucket"				"1"
-	"bucket_position"		"1"
-	"bucket_360"			"0"
-	"bucket_position_360"	"1"
+	"printname"	"#HL2_Grenade"
+	"viewmodel"				"models/weapons/v_grenade.mdl"
+	"playermodel"			"models/items/grenadeAmmo.mdl"
+	"anim_prefix"			"Grenade"
+	"bucket"				"4"
+	"bucket_position"		"0"
+	"bucket_360"			"3"
+	"bucket_position_360"		"0"
 
-	"clip_size"				"6"
-	"default_clip"			"6"
-	"primary_ammo"			"357"
+	"clip_size"				"-1"
+	"clip2_size"			"-1"
+	"default_clip"			"1"
+	"default_clip2"			"-1"
+
+	"primary_ammo"			"grenade"
 	"secondary_ammo"		"None"
 
-	"weight"				"6"
-	"rumble"				"2"
-	"item_flags"			"32"
-	"damage"				"35"
+	"weight"				"2"
+	"item_flags"			"18"	// ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_EXHAUSTIBLE
+	"damage"				"250"
 	"autoswitchfrom"		"1"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{
-		"empty"		"Weapon_Pistol.Empty"
-		"single_shot"	"Weapon_357.Single"
+		"special1"		"WeaponFrag.Roll"
+		"double_shot"	"common/null.wav"
+		"single_shot"	"common/null.wav"
 	}
 
 	// Weapon Sprite data is loaded by the Client DLL.
@@ -36,22 +37,22 @@ WeaponData
 		"weapon"
 		{
 				"font"		"WeaponIcons"
-				"character"	"e"
+				"character"	"k"
 		}
 		"weapon_s"
 		{	
 				"font"		"WeaponIconsSelected"
-				"character"	"e"
+				"character"	"k"
 		}
 		"weapon_small"
 		{
 				"font"		"WeaponIconsSmall"
-				"character"	"e"
+				"character"	"k"
 		}
 		"ammo"
 		{
 				"font"		"WeaponIconsSmall"
-				"character"	"q"
+				"character"	"v"
 		}
 		"crosshair"
 		{
@@ -61,8 +62,8 @@ WeaponData
 		"autoaim"
 		{
 				"file"		"sprites/crosshairs"
-				"x"			"0"
-				"y"			"48"
+				"x"			"48"
+				"y"			"72"
 				"width"		"24"
 				"height"	"24"
 		}

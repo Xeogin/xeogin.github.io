@@ -96,26 +96,26 @@
 		"sound"		""
 		"streak"	"1"
 	}
-	//"HEADSHOT"
-	//{
-	//	"eventkey"	"headshot"
-	//	"type"		"kill"
-	//	"weapon"	"pistol"
-	//	"mode"		"4"
-	//	"text"		"%a poked your eye out!"
-	//	"sound"		""
-	//	"streak"	"1"
-	//}
-	//"HEADSHOT"
-	//{
-	//	"eventkey"	"headshot"
-	//	"type"		"kill"
-	//	"weapon"	"shotgun"
-	//	"mode"		"4"
-	//	"text"		"%a blew your head off!"
-	//	"sound"		""
-	//	"streak"	"1"
-	//}
+	"HEADSHOT"
+	{
+		"eventkey"	"headshot"
+		"type"		"kill"
+		"weapon"	"pistol"
+		"mode"		"4"
+		"text"		"%a poked out your eye"
+		"sound"		""
+		"streak"	"1"
+	}
+	"HEADSHOT"
+	{
+		"eventkey"	"headshot"
+		"type"		"kill"
+		"weapon"	"shotgun"
+		"mode"		"4"
+		"text"		"%a filled your head with lead"
+		"sound"		""
+		"streak"	"1"
+	}
 	//"HEADSHOT"
 	//{
 	//	"eventkey"	"headshot"
@@ -145,67 +145,67 @@
 		"sound"		"vo/npc/male01/oneforme.wav"
 		"streak"	"1"
 	}
-	//"MULTIKILL"
-	//{
-	//	"eventkey"	"multikill3"
-	//	"type"		"kill"
-	//	"mode"		"1"
-	//	"text"		"%a Triple Kill !!"
-	//	"sound"		""
-	//	"streak"	"1"
-	//}
-	//"MULTIKILL"
-	//{
-	//	"eventkey"	"multikill4"
-	//	"type"		"kill"
-	//	"mode"		"1"
-	//	"text"		"%a Quadruple Kill !!"
-	//	"sound"		""
-	//	"streak"	"1"
-	//}
-	//"MULTIKILL"
-	//{
-	//	"eventkey"	"multikill5"
-	//	"type"		"kill"
-	//	"mode"		"1"
-	//	"text"		"%a Quintuple Kill !!"
-	//	"sound"		""
-	//	"streak"	"1"
-	//}
-	//"MULTIKILL"
-	//{
-	//	"eventkey"	"multikill6"
-	//	"type"		"kill"
-	//	"mode"		"1"
-	//	"text"		"%a Sextuple Kill !!"
-	//	"sound"		""
-	//	"streak"	"1"
-	//}
-	//"MULTIKILL"
-	//{
-	//	"eventkey"	"multikill7"
-	//	"type"		"kill"
-	//	"mode"		"1"
-	//	"text"		"%a Septuple Kill !!"
-	//	"sound"		""
-	//	"streak"	"1"
-	//}
-	//"MULTIKILL"
-	//{
-	//	"eventkey"	"multikill8"
-	//	"type"		"kill"
-	//	"mode"		"1"
-	//	"text"		"%a Octuple Kill !!"
-	//	"sound"		""
-	//	"streak"	"1"
-	//}
+	"MULTIKILL"
+	{
+		"eventkey"	"multikill3"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a got a triple kill!"
+		"sound"		""
+		"streak"	"1"
+	}
+	"MULTIKILL"
+	{
+		"eventkey"	"multikill4"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a got a quadruple kill!"
+		"sound"		""
+		"streak"	"1"
+	}
+	"MULTIKILL"
+	{
+		"eventkey"	"multikill5"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a got a quintuple kill!"
+		"sound"		""
+		"streak"	"1"
+	}
+	"MULTIKILL"
+	{
+		"eventkey"	"multikill6"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a got a sextuple kill!"
+		"sound"		""
+		"streak"	"1"
+	}
+	"MULTIKILL"
+	{
+		"eventkey"	"multikill7"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a got a septuple kill!"
+		"sound"		""
+		"streak"	"1"
+	}
+	"MULTIKILL"
+	{
+		"eventkey"	"multikill8"
+		"type"		"kill"
+		"mode"		"1"
+		"text"		"%a got an octuple kill!"
+		"sound"		""
+		"streak"	"1"
+	}
 	"JIHAD"
 	{
 		"eventkey"	"jihad"
 		"type"		"kill"
 		"mode"		"1"
 		"text"		"%a Kamikaze"
-		"sound"		""
+		"sound"		"vo/citadel/br_youfool.wav"
 		"streak"	"1"
 	}
 	"JIHAD"

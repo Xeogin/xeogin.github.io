@@ -14,8 +14,8 @@ public OnPluginStart(){
 
 public Event_Spawn (Handle:event, const String:name[], bool:dontBroadcast){
 	new client = GetClientOfUserId(GetEventInt(event, "userid"));
-	SetEntProp(client, Prop_Send, "m_iFOVStart", 130);
+	SetEntProp(client, Prop_Send, "m_iFOVStart", 120);
 	SetEntPropFloat(client, Prop_Send, "m_flFOVTime", GetGameTime());
 	//SetEntProp(client, Prop_Send, "m_iFOV", 75);
-	SetEntPropFloat(client, Prop_Send, "m_flFOVRate", 1.2);
+	SetEntPropFloat(client, Prop_Send, "m_flFOVRate", 1.0);
 }

@@ -13,14 +13,14 @@ WeaponData
 	"bucket_position_360"	"1"
 
 	"clip_size"				"6"
+
 	"primary_ammo"			"Buckshot"
 	"secondary_ammo"		"None"
-	"default_clip"			"6"
 
 	"weight"				"6"
 	"rumble"				"5"
 	"item_flags"			"32"
-	"damage"				"5"
+	"damage"				"7"
 	"autoswitchfrom"		"1"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)

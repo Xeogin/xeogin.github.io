@@ -1,0 +1,36 @@
+// Advertisements 2.0
+// by Tsunami
+//
+// Types
+// -----
+// center: Center message
+// chat: Chat message
+// hint: Hint message
+// menu: Menu message
+// top: Top message
+//
+// Flags (optional)
+// -----
+// Accepts flags of admins that will not see the advertisement.
+// When omitted everyone will see the advertisement.
+// When left empty only admins will see the advertisement.
+
+"Advertisements"
+{
+	"1"
+    {
+    	"chat"		"{ghostwhite}To change your character model, type '{green}!model{ghostwhite}' in the chat"
+    }
+    "2"
+    {
+        "top"		"Current Map: {currentmap}"
+    }
+    "3"
+    {
+    	"chat"		"{ghostwhite}To start a vote to change the map, type '{green}rtv{ghostwhite}' in the chat"
+    }
+    "4"
+    {
+    	"chat"		"{ghostwhite}To just watch for a while, type '{green}spectate{ghostwhite}' in the chat"
+    }
+}

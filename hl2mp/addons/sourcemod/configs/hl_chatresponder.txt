@@ -1,0 +1,23 @@
+"Chat Responder"
+{
+	"Hi"
+	{
+		"response" "Hey! How are you!"
+		"type" "e"
+	}
+	"Can you hear me?"
+	{
+		"response" "I can hear ya loud and clear!"
+		"type" "c"
+	}
+	"Testing 1 2 3"
+	{
+		"response" "I can hear ya loud and clear!"
+		"type" "e"
+	}
+	"What's my name?"
+	{
+		"response" "Your name is {NAME}!"
+		"type" "e"
+	}
+}

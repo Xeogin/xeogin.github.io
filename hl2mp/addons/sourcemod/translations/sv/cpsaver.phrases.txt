@@ -1,0 +1,46 @@
+"Phrases"
+{
+	"CheckpointSaver Spawn Ad"
+	{
+				// max 96 characters
+		"sv"		"Denna servern kör CheckpointSaver för SM!"
+	}
+	"Available Chat Commands"
+	{
+				// max 64 characters
+		"sv"		"Tillgängliga chattkommandon:"
+	}
+	"Enjoy Your Stay"
+	{
+				// max 64 characters
+		"sv"		"Ha så kul på servern!"
+	}
+	"Menu"
+	{
+		"sv"		"SM_CheckpointSaver-meny"
+	}
+	"Save Location"
+	{
+		"sv"		"Spara nuvarande position"
+	}
+	"Teleport"
+	{
+		"sv"		"Teleportera"
+	}
+	"Location Saved"
+	{
+		"sv"		"Position sparad."
+	}
+	"Not On Ground"
+	{
+		"sv"		"Fel - du är i luften!"
+	}
+	"Must Be Alive"
+	{
+		"sv"		"Fel - du måste vara vid liv för att använda denna funktionen!"
+	}
+	"No Location Saved"
+	{
+		"sv"		"Du har ingen position sparad."
+	}
+}

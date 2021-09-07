@@ -1,0 +1,46 @@
+"Phrases"
+{
+	"CheckpointSaver Spawn Ad"
+	{
+				// max 96 characters
+		"en"		"This server is running the CheckpointSaver plugin for SM."
+	}
+	"Available Chat Commands"
+	{
+				// max 64 characters
+		"en"		"Available chat commands:"
+	}
+	"Enjoy Your Stay"
+	{
+				// max 64 characters
+		"en"		"Enjoy your stay and have fun!"
+	}
+	"Menu"
+	{
+		"en"		"SM_CheckpointSaver menu"
+	}
+	"Save Location"
+	{
+		"en"		"Save location"
+	}
+	"Teleport"
+	{
+		"en"		"Teleport"
+	}
+	"Location Saved"
+	{
+		"en"		"Location saved."
+	}
+	"Not On Ground"
+	{
+		"en"		"Error - not on ground!"
+	}
+	"Must Be Alive"
+	{
+		"en"		"Error - you must be alive to use this feature!"
+	}
+	"No Location Saved"
+	{
+		"en"		"You have no location saved."
+	}
+}

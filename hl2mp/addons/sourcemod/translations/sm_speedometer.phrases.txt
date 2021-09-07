@@ -1,0 +1,60 @@
+"Phrases"
+{
+	"Prefix_Chat"
+	{
+		"#format"	""
+		"en"		"Speedometer: "
+	}
+	//===========================================
+	"Phrase_Velocity_Display"
+	{
+		"#format"	"{1:.3f}"
+		"en"		"Current Velocity: {1}"	
+	}
+	"Phrase_Highest_Velocity"
+	{
+		"#format"	"{1:s},{2:f}"
+		"en"		"{1} had the highest velocity of {2}!"	
+	}
+	"Phrase_Enable_Speedometer"
+	{
+		"#format"	""
+		"en"		"Your speedometer has been enabled!"
+	}
+	"Phrase_Disable_Speedometer"
+	{
+		"#format"	""
+		"en"		"Your speedometer has been disabled!"
+	}
+	"Phrase_Plugin_Disabled"
+	{
+		"#format"	""
+		"en"		"Sorry, but this feature is currently disabled!"
+	}
+	"Phrase_Mystery_Winner"
+	{
+		"#format"	""
+		"en"		"???"	
+	}
+	//===========================================
+	"Menu_Cookie_Display"
+	{
+		"#format"	""
+		"en"		"Speedometer Settings"
+	}
+	"Menu_Cookie_Title"
+	{
+		"#format"	""
+		"en"		"Speedometer Settings:"
+	}
+	"Menu_Cookie_Enable"
+	{
+		"#format"	""
+		"en"		"Disable Display"
+	}
+	"Menu_Cookie_Disable"
+	{
+		"#format"	""
+		"en"		"Enable Display"
+	}
+}

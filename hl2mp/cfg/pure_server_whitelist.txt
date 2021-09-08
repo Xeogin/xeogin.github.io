@@ -40,6 +40,7 @@ whitelist
 	materials\vgui\logos\...				any
 	materials\vgui\logos\ui\...				any
 	materials\vgui\replay\thumbnails\...	any
+	materials\vgui\resource\...				any
 	models\...								trusted_source
 	models\player\...						any
 	particles\...							trusted_source
@@ -52,4 +53,5 @@ whitelist
 	scripts\soundmixers.txt					any
 	sound\...								trusted_source
 	sound\ui\hitsound.wav					any
+	sound\weapons\...						any
 }

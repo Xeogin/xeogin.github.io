@@ -18,7 +18,7 @@ WeaponData
 
 	"weight"				"1"
 	"item_flags"			"32"
-	"damage"				"300"
+	"damage"				"260" //300
 	"autoswitchfrom"		"1"
 
 	// Weapon Sprite data is loaded by the Client DLL.

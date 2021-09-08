@@ -17,8 +17,20 @@
 
 "Advertisements"
 {
-    "1"
+	"1"
+    {
+    	"chat"		"{ghostwhite}To change your character model, type '{green}!model{ghostwhite}' in the chat"
+    }
+    "2"
     {
         "top"		"Current Map: {currentmap}"
+    }
+    "3"
+    {
+    	"chat"		"{ghostwhite}To start a vote to change the map, type '{green}rtv{ghostwhite}' in the chat"
+    }
+    "4"
+    {
+    	"chat"		"{ghostwhite}To just watch for a while, type '{green}spectate{ghostwhite}' in the chat"
     }
 }

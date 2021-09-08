@@ -4,7 +4,13 @@
  */
 Configs
 {
-	"cfg/server.cfg"					"Standard Server Setup"
-	"cfg/sourcemod/sm_warmode_on.cfg"	"War Mode On"
-	"cfg/sourcemod/sm_warmode_off.cfg"	"War Mode Off"
+	"cfg/server.cfg"					"Standard"
+	"cfg/mode/competitive.cfg"			"Competitive"
+	"cfg/mode/instagib.cfg"				"Heads n' Bows"
+	"cfg/mode/jumps.cfg"				"Jumps"
+	"cfg/mode/lowgrav.cfg"				"Killbox"
+	"cfg/mode/practice.cfg"				"Practice"
+	"cfg/mode/surf.cfg"					"Surf"
+	//"cfg/sourcemod/sm_warmode_on.cfg"	"War Mode On"
+	//"cfg/sourcemod/sm_warmode_off.cfg"	"War Mode Off"
 }

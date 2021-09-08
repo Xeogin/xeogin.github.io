@@ -21,11 +21,4 @@ whitelist
 	scripts\game_sounds_vo_handmade.txt  trusted_source
 	scripts\game_sounds_weapons.txt      trusted_source
 	//scripts\soundmixers.txt              trusted_source
-
-	//
-	// But make some exceptions
-	//
-	
-	materials\vgui\replay\thumbnails\... any
-	//sound\ui\hitsound.wav                any
 }

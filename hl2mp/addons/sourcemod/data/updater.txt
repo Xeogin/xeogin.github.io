@@ -4,16 +4,27 @@
 	{
 		"Version"
 		{
-			"Latest"	"1.1.3"
+			"Latest"	"1.6.3"
 		}
-		
-		"Notes"	"Find a list of my plugins (and links to their threads) at www.doctormckay.com. Changes:"
-		"Notes" " - Updater improvements"
+
+		"Notes" "Fixed rare case where bumper carts used outside of cart areas in official halloween maps could cause false positives when stood on weird inclines (Such a weird, rare and specific case)."
+		"Notes" "Added suggestion from Boomix, SourceTV is now regarded as an invalid player."
 	}
-	
+
 	"Files"
 	{
-		"Plugin"	"Path_SM/plugins/st_gamedesc_override.smx"
-		"Source"	"Path_SM/scripting/st_gamedesc_override.sp"
+		"Plugin"	"Path_SM/plugins/lilac.smx"
+		"Plugin"	"Path_SM/translations/lilac.phrases.txt"
+		"Plugin"	"Path_SM/translations/chi/lilac.phrases.txt"
+		"Plugin"	"Path_SM/translations/cze/lilac.phrases.txt"
+		"Plugin"	"Path_SM/translations/de/lilac.phrases.txt"
+		"Plugin"	"Path_SM/translations/es/lilac.phrases.txt"
+		"Plugin"	"Path_SM/translations/fr/lilac.phrases.txt"
+		"Plugin"	"Path_SM/translations/no/lilac.phrases.txt"
+		"Plugin"	"Path_SM/translations/pt/lilac.phrases.txt"
+		"Plugin"	"Path_SM/translations/ru/lilac.phrases.txt"
+		"Plugin"	"Path_SM/translations/tr/lilac.phrases.txt"
+		"Plugin"	"Path_SM/translations/ua/lilac.phrases.txt"
+		"Source"	"Path_SM/scripting/lilac.sp"
 	}
 }

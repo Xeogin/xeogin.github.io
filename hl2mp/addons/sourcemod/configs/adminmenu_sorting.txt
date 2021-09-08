@@ -15,15 +15,15 @@
 		"item"		"sm_gag"
 		"item"		"sm_burn"		
 		"item"		"sm_beacon"
-		"item"		"sm_freeze"
+		//"item"		"sm_freeze"
 		"item"		"sm_timebomb"
 		"item"		"sm_firebomb"
-		"item"		"sm_freezebomb"
+		//"item"		"sm_freezebomb"
 	}
 
 	"ServerCommands"
 	{
-		"item"		"sm_map"
+		//"item"		"sm_map"
 		"item"		"sm_execcfg"
 		"item"		"sm_reloadadmins"
 	}

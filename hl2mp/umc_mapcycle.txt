@@ -192,23 +192,32 @@
 {
     "Competitive"
     {
-    	"default_min_players"   "1"
-    	"maps_invote"   "4"
-    	"pre-command"   "sv_gravity 600"
-        "pre-command"   "mp_teamplay 0"
-        "pre-command"   "sm_cvar sv_accelerate 10"
-        "pre-command"   "sm_cvar sv_airaccelerate 10"
+        //"default_min_players"   "1"
+        "maps_invote"           "3"
+        "pre-command"           "sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 10; sm_cvar sv_friction 4; sv_gravity 600"
 
     	"aim_arena_reloaded"
     	{
-    		"display"		"Aim Arena (Comp)"
-    		"max_players"   "3"
+    		"display"	"Aim Arena (Comp)"
     	}
+        "dm_airfusion_final"
+        {
+            "display"   "Airfusion (Comp)"
+            "min_players"   "3"
+        }
+        "dm_biohazard_cal"
+        {
+            "display"   "Biohazard (Comp)"
+        }
     	"dm_caverns_r1"
     	{
     		"display"		"Caverns (Comp)"
     		"min_players"   "3"
     	}
+        "dm_ethic"
+        {
+            "display"       "Ethic (Comp)"
+        }
     	"dm_lockdown_r6"
     	{
     		"display"		"Lockdown (Comp)"
@@ -226,17 +235,20 @@
     	"dm_organic_b5"
     	{
     		"display"		"Organic (Comp)"
-    		"max_players"   "4"
+    		"min_players"   "3"
     	}
-    	"dm_resident_cu"
-        {
-            "display"       "Resident (Comp)"
-            "min_players"   "3"
-        }
+    	"dm_overwatch_r1"
+    	{
+    		"display"		"Overwatch (Comp)"
+    	}
+    	//"dm_resident_cu"
+        //{
+        //    "display"       "Resident (Comp)"
+        //    "min_players"   "3"
+        //}
     	"dm_tigcrik_r2"
     	{
-    		"display"		"Tigcrik (Comp)"
-    		"max_players"   "3"
+    		"display"	"Tigcrik (Comp)"
     	}
     	"dm_zeta_rc2"
         {
@@ -244,214 +256,347 @@
             "min_players"   "4"
         }
     }
-    "Fishing"
+    "Heads n' Bows"
     {
-    	"default_allow_every"	"60"
-        "default_min_players"   "3"
-        "default_max_players"   "5"
-        "maps_invote"   "2"
-        "pre-command"   "mp_teamplay 1"
-        "pre-command"   "sm_cvar sv_accelerate 10"
-        "pre-command"   "sm_cvar sv_airaccelerate 10"
-        "pre-command"   "sv_gravity 600"
-
-        "z_umi_boatz_v2"
+        "default_min_players"   "2"
+        "maps_invote"           "1"
+        "pre-command"           "instagib 1; mp_teamplay 0; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 30; sm_cvar sv_friction 4; sv_gravity 400"
+    
+    	"dm_killbox_coldinhere01_tko"
+		{
+			"display"	"Cold In Here (HnB)"
+		}
+		"dm_bk_expected_dev_rc1"
+    	{
+    		"display"		"Expected (HnB)"
+            //"min_players"   "3"
+    	}
+        "dm_greenhouse"
         {
-            "display"       "Boatz (Fishing)"
+            "display"	"Greenhouse (HnB)"
         }
-        "z_umizuri_pdef_z2"
+        "dm_killhall_003"
+		{
+			"display"	"Kill Hall (HnB)"
+		}
+        //"dm_magnum_nub_v3e"
+        //{
+        //   "display"	"Magnum Nub (HnB)"
+        //}
+        "dm_mexicana_b7"
         {
-            "display"       "P (Fishing)"
+            "display"	"Mexicana (HnB)"
+        }
+        "dm_dgc_ruins_v3"
+        {
+            "display"	"Ruins (HnB)"
+            "min_players"   "3"
+        }
+        "dm_snowfall_beta3"
+    	{
+    		"display"	"Snowfall (HnB)"
+    	}
+    	//"dm_station"
+        //{
+        //    "display"		"Station (HnB)"
+        //    "max_players"   "4"
+        //}
+        "dm_tox_ug"
+        {
+            "display"   "Tox (HnB)"
+        }
+        "dm_g23_transport_inc_b2"
+        {
+            "display"   "Transport Inc. (HnB)"
         }
     }
-    //"Grav Only"
-    //{
-    //	  "default_min_players"   "3"
-    //    "maps_invote"   "1"
-    //    "pre-command"   "sm_cvar sv_accelerate 10"
-    //    "pre-command"   "sm_cvar sv_airaccelerate 10"
-    //    "pre-command"   "sv_gravity 600"
-    //
-    //    "apocalypstreet2"
-    //    {
-    //        "display"       "Apocalypse Street (Grav Only)"
-    //    }
-    //}
-    "Low Grav"
+    "Jumps"
     {
-    	"default_allow_every"	"60"
-        "default_min_players"   "2"
-    	"maps_invote"   "4"
-        "pre-command"	"mp_teamplay 0"
-        "pre-command"   "sm_cvar sv_accelerate 20"
-        "pre-command"   "sm_cvar sv_airaccelerate 30"
-        "pre-command"   "sv_gravity 210"
+    	"default_allow_every"   "60"
+    	//"default_min_players"   "1"
+        "maps_invote"           "2"
+        "pre-command"           "mp_teamplay 0; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 10; sm_cvar sv_friction 4; sv_gravity 600"
 
-		"dm_killbox_alex_remake"
+        "academy_nubjumper_v6"
 		{
-			"display"	"Alex (Low Grav)"
+			"display"	"Academy Jumper (Jumps)"
+		}
+        "ancient_jumps_nub"
+        {
+            "display"   "Ancient Jumps (Jumps)"
+        }
+		//"tr_briggs_jumpmap_r2"
+		//{
+		//	"display"	"Brigg's Jump (Jumps)"
+		//}
+		//"jump_bunny_ruins_beta_v2"
+		//{
+		//	"display"	"Bunny Ruins (Jumps)"
+		//}
+        "jm_jumpscolors_b9"
+        {
+            "display"   "Colors (Jumps)"
+            "min_players"   "1"
+        }
+        "jm_jumpdifferent_v07"
+        {
+            "display"   "Jump Different (Jumps)"
+        }
+		"jumpstyle_nub_v1"
+		{
+			"display"	"Jumpstyle (Jumps)"
+		}
+		"jm_kenira"
+		{
+			"display"	"Kenira (Jumps)"
+		}
+		"ju_loip104_jumping_finished"
+		{
+			"display"	"Loip Jumping (Jumps)"
+		}
+		"jm_mozi_1_2_3"
+		{
+			"display"	"Mozi 1-3 (Jumps)"
+			"min_players"   "1"
+		}
+		"jm_mozi_4_5"
+		{
+			"display"	"Mozi 4-5 (Jumps)"
+			"min_players"   "1"
+		}
+		"jm_mozi_6_7_8"
+		{
+			"display"	"Mozi 6-8 (Jumps)"
+			"min_players"   "1"
+		}
+        "jm_originalsjumps_b3"
+        {
+            "display"   "Original's Jumps (Jumps)"
+            "min_players"   "1"
+        }
+		"tr_ptrain_b02_d"
+		{
+			"display"	"P Train (Jumps)"
+			"min_players"   "1"
+		}
+        "jm_psyjumps_r1"
+        {
+            "display"   "Psy Jumps (Jumps)"
+        }
+		"stylejumps_tkm_b5"
+		{
+			"display"	"Style Jumps (Jumps)"
+		}
+		"ultimatejumps_gold"
+		{
+			"display"	"Ultimate Jumps (Jumps)"
+		}
+    }
+    "Killbox"
+    {
+    	"default_min_players"   "2"
+        "default_allow_every"   "60"
+        "maps_invote"           "3"
+        "pre-command"           "mp_teamplay 0; sm_cvar sv_accelerate 15; sm_cvar sv_airaccelerate 20; sm_cvar sv_friction 3; sv_gravity 280"
+
+    	"dm_killbox_2014_rc1"
+    	{
+    		"display"	"2014 (Killbox)"
+    	}
+    	"dm_4c_killbox_b2"
+		{
+			"display"	"4C (Killbox)"
+		}
+		"dm_killbox_air_skm"
+		{
+			"display"	"Air (Killbox)"
+		}
+    	"dm_killbox_alpha_bcc_b2"
+    	{
+    		"display"	"Alpha (Killbox)"
+    	}
+    	"dm_killbox_arena_skm"
+    	{
+    		"display"	"Arena (Killbox)"
+    	}
+    	"dm_killroof_big_snoopy_v6"
+		{
+			"display"	"Big Snoopy (Killbox)"
 			"min_players"   "3"
 		}
-    	//"dm_killbox_alpha_bcc_b2"
-    	//{
-    	//	"display"	"Alpha (Low Grav)"
-    	//}
-    	//"dm_bs_bloodbox_final"
-        //{
-        //    "display"   "Blood Box (Low Grav)"
-        //}
-        "dm_killbox_coldinhere01_tko"
+    	"dm_bs_bloodbox_final"
+        {
+            "display"   "Blood Box (Killbox)"
+        }
+        "dm_bk_breenbox2010_rc1"
+        {
+            "display"   "Breen Box (Killbox)"
+            "min_players"   "3"
+        }
+        "dm_killbox_coldblood_ss"
+        {
+        	"display"	"Cold Blood (Killbox)"
+        	"min_players"   "3"
+        }
+        "dm_bk_coldbox_rc2"
+        {
+            "display"   "Cold Box (Killbox)"
+        }
+		"dm_killbox_corridors_skm"
 		{
-			"display"	"Cold In Here (Low Grav)"
-			"min_players"   "3"
+			"display"		"Corridors (Killbox)"
+			"min_players"   "4"
 		}
-		//"dm_killbox_corridors_skm"
-		//{
-		//	"display"		"Corridors (Low Grav)"
-		//	"min_players"   "4"
-		//}
-		//"dm_killbox_dev_skm"
-		//{
-		//	"display"		"Dev (Low Grav)"
-		//	"min_players"   "2"
-		//}
+		"dm_killbox_dev_skm"
+		{
+			"display"		"Dev (Killbox)"
+		}
 		"dm_killbox_[dmk]_b6"
 		{
-			"display"	"DMK (Low Grav)"
+			"display"	"DMK (Killbox)"
 		}
-		//"dm_killbox_domination_skm"
-		//{
-		//	"display"	"Domination (Low Grav)"
-		//}
+		"dm_killbox_domination_skm"
+		{
+			"display"	"Domination (Killbox)"
+		}
 		"dm_killbox_e_tko"
 		{
-			"display"	"E (Low Grav)"
+			"display"	"E (Killbox)"
 		}
-		"dm_killhall_003"
+		"dm_killbox_final_emc2_skm"
 		{
-			"display"	"Hall (Low Grav)"
+			"display"	"EMC (Killbox)"
 		}
-		//"dm_killbox_kbh_2_skm"
-		//{
-		//	"display"	"KBH 2 (Low Grav)"
-		//}
+    	"dm_killbox_fraggies_b3"
+    	{
+    		"display"	"Fraggies (Killbox)"
+    	}
+		"dm_killbox_hackn"
+		{
+			"display"	"Hackn' (Killbox)"
+		}
+		"dm_killbox_kbh_2_skm"
+		{
+			"display"	"KBH 2 (Killbox)"
+		}
 		"dm_bk_lambda_box_rc1"
     	{
-    		"display"	"Lambda Box (Low Grav)"
+    		"display"		"Lambda Box (Killbox)"
             "min_players"   "3"
     	}
-		//"dm_killbox_n9ne_skm"
-		//{
-		//	"display"	"N9ne (Low Grav)"
-		//}
-		//"dm_killbox_native02_tko"
-		//{
-		//	"display"	"Native (Low Grav)"
-		//}
-		//"dm_killbox_ownage_skm"
-		//{
-		//	"display"		"Ownage (Low Grav)"
-		//	"min_players"   "2"
-		//}
+    	"dm_killbox_layercake_skm"
+    	{
+    		"display"	"Layercake (Killbox)"
+    	}
+    	"dm_killbox_marble_skm"
+    	{
+    		"display"	"Marble (Killbox)"
+    	}
+    	"dm-otf-mayhem2-packed"
+		{
+			"display"	"Mayhem (Killbox)"
+		}
+    	"asc_mp_killbox2_v11"
+		{
+			"display"	"MP (Killbox)"
+		}
+		"dm_killbox_n9ne_skm"
+		{
+			"display"	"N9ne (Killbox)"
+		}
+		"dm_killbox_native02_tko"
+		{
+			"display"	"Native (Killbox)"
+		}
+		"dm_killbox_ownage_skm"
+		{
+			"display"	"Ownage (Killbox)"
+		}
+		"dm_killbox_realm_skm"
+		{
+			"display"	"Realm (Killbox)"
+		}
 		"dm_killroof2_b3"
 		{
-			"display"	"Roof (Low Grav)"
+			"display"	"Roof (Killbox)"
 		}
-		//"dm_killbox_unfound_skm"
-		//{
-		//	"display"	"Unfound (Low Grav)"
-		//}
-		//"dm_killbox_vertigo_skm"
-		//{
-		//	"display"	"Vertigo (Low Grav)"
-		//}
-		//"dm_killbox_weee_skm"
-		//{
-		//	"display"		"Weee! (Low Grav)"
-		//	"min_players"   "2"
-		//}
-		//"dm_killbox_whichway_skm"
-		//{
-		//	"display"		"Which Way? (Low Grav)"
-		//	"min_players"   "3"
-		//}
-        //"dm_snipe_eye2"
-        //{
-        //    "display"       "Snipe (Low Grav)"
-        //}
-    }
-    "Practice"
-    {
-        "default_allow_every"   "30"
-    	//"default_max_players"	"3"
-    	"maps_invote"   "4"
-    	"pre-command"   "mp_teamplay 0"
-    	"pre-command"   "sv_gravity 550"
-        "pre-command"   "sm_cvar sv_accelerate 10"
-        "pre-command"   "sm_cvar sv_airaccelerate 10"
-
-    	"dm_avalon_b1"
-    	{
-    		"display"	"Avalon (Bots)"
-    	}
-    	//"dm_castigate"
-    	//{
-		//	"display"	"Castigate (Bots)"
-    	//}
-    	"halls3"
-    	{
-    		"display"	"Halls (Bots)"
-    	}
-    	"dm_lockdown"
-    	{
-    		"display"	"Lockdown (Bots)"
-    	}
-    	"dm_outlying_v2"
-    	{
-    		"display"	"Outlying (Bots)"
-    	}
-    	"dm_overwatch"
-    	{
-    		"display"	"Overwatch (Bots)"
-    	}
-    	"dm_powerhouse"
-    	{
-    		"display"	"Powerhouse (Bots)"
-    	}
-    	"dm_rapidfire"
+		"dm_killbox_sci_skm"
 		{
-			"display"	"Rapidfire (Bots)"
+			"display"	"Sci (Killbox)"
 		}
-    	"dm_resistance"
-    	{
-    		"display"	"Resistance (Bots)"
-    	}
-    	"dm_runoff"
+		"dm_killbox_shootery_skm"
+		{
+			"display"	"Shootery (Killbox)"
+			"min_players"   "4"
+		}
+		"dm_killbox_snipereye_2"
         {
-            "display"	"Runoff (Bots)"
+            "display"	"Sniper Eye (Killbox)"
         }
-        "dm_steamlab"
+		"dm_killbox_trees_skm"
+		{
+			"display"	"Trees (Killbox)"
+		}
+		"dm_killbox_unfound_skm"
+		{
+			"display"	"Unfound (Killbox)"
+		}
+		"dm_killbox_vertigo_skm"
+		{
+			"display"	"Vertigo (Killbox)"
+		}
+		"dm_killbox_rac_volts_skm"
+		{
+			"display"	"Volts (Killbox)"
+		}
+		"dm_killbox_weee_skm"
+		{
+			"display"		"Weee! (Killbox)"
+		}
+		"dm_killbox_whichway_skm"
+		{
+			"display"		"Which Way? (Killbox)"
+			"min_players"   "3"
+		}
+		//"dm_killbox_whitestyle"
+		//{
+		//	"display"		"Whitestyle (Killbox)"
+		//}
+    }
+    "Special"
+    {
+        "default_allow_every"   "45"
+        "maps_invote"           "1"
+        "default_min_players"   "4"
+        "pre-command"           "mp_teamplay 1; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 10; sm_cvar sv_friction 4; sv_gravity 600"
+
+        //"apocalypstreet2"
+        //{
+        //  "display"   "Apocalypse Street (Grav Only)"
+        //}
+        "real2ctf_atomicgarden5"
         {
-            "display"   "Steam Lab (Bots)"
+            "display"   "Atomic Garden (CTF)"
         }
-    	"dm_underpass"
-    	{
-    		"display"	"Underpass (Bots)"
-    	}
-    	"dm_zest"
-    	{
-    		"display"	"Zest (Bots)"
-    	}
+        "z_umi_boatz_v2"
+        {
+            "display"   "Boatz (Fishing)"
+        }
+        "ctf_new_test_map_b15_2"
+        {
+            "display"   "Mini Fort (CTF)"
+        }
+        //"z_umizuri_pdef_z2"
+        //{
+        //  "display"   "P (Fishing)"
+        //}
     }
     "Standard"
     {
-    	"default_allow_every"	"60"
+        "default_allow_every"   "60"
         "default_min_players"   "2"
-    	"maps_invote"   "5"
-    	"pre-command"	"mp_teamplay 0"
-        "pre-command"   "sm_cvar sv_accelerate 10"
-        "pre-command"   "sm_cvar sv_airaccelerate 10"
-        "pre-command"   "sv_gravity 600"
+        "maps_invote"           "4"
+        "pre-command"           "mp_teamplay 0; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 10; sv_gravity 600; sm_cvar sv_friction 4; sm_noblock_good_enabled 0"
 
         "dm_1-mag_r1"
         {
@@ -463,11 +608,16 @@
     		"display"		"7 Hour (Standard)"
     		"min_players"   "3"
     	}
-    	"dm_area22"
+    	"dm_ancient_rl_b31"
         {
-            "display"       "Area 22 (Standard)"
-            "min_players"   "4"
+            "display"       "Ancient (Standard)"
+            "min_players"   "3"
         }
+    	//"dm_area22"
+        //{
+        //    "display"       "Area 22 (Standard)"
+        //    "min_players"   "4"
+        //}
         "dm_asylum_riot"
         {
             "display"       "Asylum Riot (Standard)"
@@ -478,6 +628,10 @@
             "display"       "Aurora City (Standard)"
             "min_players"   "3"
         }
+        "dm_avalon_b1"
+    	{
+    		"display"     "Avalon (Standard)"
+    	}
     	"dm_backbone"
     	{
     		"display"		"Backbone (Standard)"
@@ -488,43 +642,58 @@
     		"display"		"Balcony (Standard)"
             "min_players"   "3"
     	}
+    	//"dm_blades"
+    	//{
+    	//	"display"		"Blades (Standard)"
+    	//}
     	"dm_bloom_pcp_v1"
     	{
     		"display"		"Bloom (Standard)"
-    		"min_players"   "4"
+    		"min_players"   "5"
     	}
-        //"dm_bridges_kb_s"
-        //{
-        //    "display"       "Bridges (Standard)"
-        //    "max_players"   "3"
-        //}
         "dm_campus_beta_bv1"
     	{
     		"display"		"Campus (Standard)"
     		"min_players"   "3"
     	}
+        "dm_canals_works_final_beta3"
+        {
+            "display"       "Canals (Standard)"
+        //    "min_players"   "3"
+        }
     	"dm_carousel"
     	{
-    		"display"	"Carousel (Standard)"
+    		"display"		"Carousel (Standard)"
             "min_players"   "3"
+    	}
+    	"dm_castigate"
+    	{
+			"display"     "Castigate (Standard)"
     	}
     	"dm_clocks"
     	{
-    		"display"	"Clocks (Standard)"
+    		"display"		"Clocks (Standard)"
             "min_players"   "3"
     	}
         "dm_construction_site_b7"
         {
-            "display"   "Construction Site (Standard)"
+            "display"   	"Construction Site (Standard)"
             "max_players"   "5"
+            //"min_players"   "2"
         }
     	"a2k_crossbow_vs_357"
         {
-            "display"    "Crossbow VS 357 (Standard)"
+            "display"    	"Crossbow VS 357 (Standard)"
+            "max_players"   "5"
+        }
+        "dm_deathfan_facility_a2"
+        {
+            "display"       "Deathfan Facility (Standard)"
+            "min_players"   "3"
         }
     	"dm_democracy"
     	{
-    		"display"	"Democracy (Standard)"
+    		"display"		"Democracy (Standard)"
             "min_players"   "4"
     	}
     	"dm_dust2_crazy_v3"
@@ -532,14 +701,9 @@
     		"display"		"Dust 2 Crazy (Standard)"
     		"min_players"   "4"
     	}
-    	"dm_bk_expected_dev_rc1"
-    	{
-    		"display"	"Expected (Standard)"
-            "min_players"   "3"
-    	}
     	"dm_entrepot"
     	{
-    		"display"	"Entrepot (Standard)"
+    		"display"		"Entrepot (Standard)"
             "min_players"   "4"
     	}
     	"dm_fallout"
@@ -549,7 +713,7 @@
     	}
     	"dm_fishdocks"
     	{
-    		"display"	"Fish Docks (Standard)"
+    		"display"		"Fish Docks (Standard)"
             "min_players"   "3"
     	}
     	"dm_forest_vendetta_v1"
@@ -557,24 +721,19 @@
     		"display"		"Forest Vendetta (Standard)"
     		"min_players"   "3"
     	}
-        "dm_greenhouse"
-        {
-            "display"       "Greenhouse (Standard)"
-            "min_players"   "3"
-        }
-        "grudge3"
-        {
-            "display"       "Grudge (Standard)"
-            "min_players"   "3"
-        }
-        "dm_industry_canals_v3"
-        {
-            "display"   "Industry Canals (Standard)"
-            "min_players"   "3"
-        }
+    	"dm_fuzbeam_b2"
+    	{
+    		"display"		"Fuzbeam (Standard)"
+    		"min_players"   "4"
+    	}
+        //"dm_industry_canals_v3"
+        //{
+        //    "display"   	"Industry Canals (Standard)"
+        //    "min_players"   "3"
+        //}
         "dm_kin"
     	{
-    		"display"	"Kin (Standard)"
+    		"display"		"Kin (Standard)"
             "min_players"   "3"
     	}
     	"dm_lambda_bunker"
@@ -587,19 +746,13 @@
             "display"       "Lost Station (Standard)"
             "min_players"   "3"
         }
-        "dm_magnum_nub_v3e"
-        {
-            "display"       "Magnum Nub (Standard)"
-            "min_players"   "3"
-        }
+        "dm_outlying_v2"
+    	{
+    		"display"     "Outlying (Standard)"
+    	}
     	"dm_overcast"
     	{
-    		"display"	"Overcast (Standard)"
-            "min_players"   "3"
-    	}
-    	"dm_overwatch_r1"
-    	{
-    		"display"	"Overwatch (Standard)"
+    		"display"		"Overcast (Standard)"
             "min_players"   "3"
     	}
     	"dm_p0sitivibration"
@@ -612,55 +765,43 @@
         //    "display"       "Piff (Standard)"
         //    "max_players"   "4"
         //}
-    	"dm_playground_deluxe"
-    	{
-    		"display"		"Playground (Standard)"
-    		"min_players"   "3"
-    	}
+    	//"dm_playground_deluxe"
+    	//{
+    	//	"display"		"Playground (Standard)"
+    	//	"min_players"   "3"
+    	//}
     	"dm_plaza17"
     	{
     		"display"		"Plaza 17 (Standard)"
     		"min_players"   "3"
     	}
-    	"dm_pointbreak_bcc_r2"
+        "dm_please"
         {
-            "display"		"Pointbreak (Standard)"
-            "min_players"   "4"
+            "display"       "Please (Standard)"
         }
         "dm_postoffice"
         {
             "display"       "Post Office (Standard)"
             "max_players"   "3"
         }
+    	"dm_rapidcore"
+    	{
+    		"display"		"Rapidcore (Standard)"
+    		"min_players"   "4"
+    	}
+    	"dm_rapidfire"
+		{
+			"display"     "Rapidfire (Standard)"
+		}
     	"dm_resident_extreme"
     	{
-    		"display"	"Resident (Standard)"
-    		"min_players"   "4"
+    		"display"		"Resident (Standard)"
+    		"min_players"   "5"
     	}
         "dm_resistance_hurtlocker_v1"
         {
             "display"       "Resistance Hurtlocker (Standard)"
             "min_players"   "3"
-        }
-        "dm_dgc_ruins_v3"
-        {
-            "display"       "Ruins (Standard)"
-            "min_players"   "3"
-        }
-        "dm_six"
-        {
-            "display"       "Six (Standard)"
-            "min_players"   "3"
-        }
-    	"dm_snowfall_beta3"
-    	{
-    		"display"		"Snowfall (Standard)"
-    		"min_players"   "3"
-    	}
-        "dm_station"
-        {
-            "display"        "Station (Standard)"
-            "max_players"   "4"
         }
     	"dm_swamplight_final"
     	{
@@ -672,9 +813,14 @@
     		"display"		"Tenements (Standard)"
     		"min_players"   "3"
     	}
+    	"dm_tides_b"
+    	{
+    		"display"		"Tides (Standard)"
+    		"min_players"   "3"
+    	}
     	"dm_tigcrik_r2_extension"
     	{
-    		"display"	"Tigcrik (Standard)"
+    		"display"		"Tigcrik (Standard)"
     		"min_players"   "3"
     	}
     	"dm_undercastle_r1"
@@ -682,16 +828,21 @@
     		"display"		"Undercastle (Standard)"
     		"min_players"   "3"
     	}
-        "dm_urban_siege"
-        {
-            "display"       "Urban Siege (Standard)"
-            "min_players"   "4"
-        }
         //"vertical_death_v4b"
         //{
         //    "display"       "Vertical Death (Standard)"
         //    "min_players"   "3"
         //}
+        "dm_vitron_f8"
+    	{
+    		"display"		"Vitron (Standard)"
+    		"min_players"   "3"
+    	}
+    	//"dm_vulture_final"
+    	//{
+    	//	"display"		"Vulture (Standard)"
+    	//	"min_players"   "3"
+    	//}
     	"dm_wardon"
     	{
     		"display"		"Wardon (Standard)"
@@ -699,28 +850,240 @@
     	}
     	"dm_warlock_final"
     	{
-    		"display"	"Warlock (Standard)"
+    		"display"		"Warlock (Standard)"
             "min_players"   "3"
     	}
     	"dm_waystation"
     	{
-    		"display"	"Waystation (Standard)"
+    		"display"		"Waystation (Standard)"
             "max_players"   "6"
+            //"min_players"   "2"
     	}
     	"dm_ff_wild_wild_west_beta6"
     	{
     		"display"		"Wild Wild West (Standard)"
     		"min_players"   "3"
     	}
-    	"dm_winter_trainyard_v2"
-    	{
-    		"display"		"Winter Trainyard (Standard)"
-    		"min_players"   "3"
-    	}
     	"dm_winterchill_r3"
     	{
     		"display"		"Winter Chill (Standard)"
     		"min_players"   "3"
+        }
+        "dm_zest"
+    	{
+    		"display"     "Zest (Standard)"
     	}
+    }
+    "Stock"
+    {
+        "default_allow_every"   "30"
+        //"default_max_players"   "2"
+        "maps_invote"           "2"
+        "pre-command"           "mp_teamplay 0; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 10; sm_cvar sv_friction 4; sv_gravity 600"
+
+        "halls3"
+        {
+            "display"     "Halls (Stock)"
+            "max_players"   "2"
+            "min_players"   "1"
+        }
+        "dm_lockdown"
+        {
+            "display"     "Lockdown (Stock)"
+        }
+        "dm_overwatch"
+        {
+            "display"     "Overwatch (Stock)"
+        }
+        "dm_powerhouse"
+        {
+            "display"     "Powerhouse (Stock)"
+            "max_players"   "3"
+            "min_players"   "1"
+        }
+        "dm_resistance"
+        {
+            "display"     "Resistance (Stock)"
+        }
+        "dm_runoff"
+        {
+            "display"     "Runoff (Stock)"
+        }
+        "dm_steamlab"
+        {
+            "display"     "Steam Lab (Stock)"
+        }
+        "dm_underpass"
+        {
+            "display"     "Underpass (Stock)"
+        }
+    }
+    "Surf"
+    {
+        "default_allow_every"   "60"
+        "maps_invote"           "3"
+        "pre-command"           "mp_teamplay 0; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 200; sm_cvar sv_friction 4; sv_gravity 600"
+
+        "surf_ace"
+        {
+            "display"     "Ace (Surf)"
+        }
+        "surf_auroria2_vg"
+        {
+            "display"     "Auroria (Surf)"
+            "min_players"   "1"
+        }
+        "surf_beginner_v5_vg"
+        {
+            "display"     "Beginner (Surf)"
+        }
+		"surf_beverages"
+		{
+        	"display"	"Beverages (Surf)"
+            "min_players"   "1"
+        }
+        "surf_bluewinter_vg"
+		{
+        	"display"	"Blue Winter (Surf)"
+            "min_players"   "1"
+        }
+        "surf_bob_hl2dm"
+		{
+        	"display"	"Bob (Surf)"
+            "min_players"   "1"
+        }
+		"surf_calycate_vg"
+		{
+        	"display"	"Calycate (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_dragon"
+		{
+        	"display"	"Dragon (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_dream_v3"
+		{
+        	"display"	"Dream (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_driftless"
+		{
+        	"display"	"Driftless (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_map_emc2_v1"
+		{
+        	"display"	"EMC2 (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_ethereal_vg"
+		{
+        	"display"	"Ethereal (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_exurbia_v2f_vg"
+		{
+        	"display"	"Exurbia (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_fast"
+		{
+        	"display"	"Fast (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_friday"
+		{
+        	"display"	"Friday (Surf)"
+        	"min_players"   "1"
+        }
+		"surf_fruits"
+		{
+        	"display"	"Fruits (Surf)"
+        }
+		"surf_guitar_hi"
+		{
+        	"display"	"Guitar (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_island"
+        {
+            "display"   "Island (Surf)"
+            "min_players"   "1"
+        }
+        "surf_kz_mix_journeys"
+		{
+        	"display"	"Journeys (Surf)"
+        	"min_players"   "1"
+        }
+		"surf_kitsune"
+		{
+        	"display"	"Kitsune (Surf)"
+        	"min_players"   "1"
+        }
+        //"mag_surf2"
+		//{
+        //	"display"	"Mag (Surf)"
+        //}
+        "surf_milkyway"
+		{
+        	"display"	"Milkyway (Surf)"
+        	"min_players"   "1"
+        }
+		"surf_noble_f_vg"
+		{
+        	"display"	"Noble (Surf)"
+            "min_players"   "1"
+        }
+        "surf_lt_omnific"
+        {
+            "display"	"Omnific (Surf)"
+        }
+		"surf_pluckin_v11"
+		{
+        	"display"	"Pluckin (Surf)"
+        }
+		//"surf_pox_njv_vg"
+		//{
+        //	"display"	"Pox (Surf)"
+        //    "min_players"   "2"
+        //}
+        "surf_reflex_b4b"
+		{
+        	"display"	"Reflex (Surf)"
+        }
+		"surf_refraxis_dm"
+		{
+        	"display"	"Refraxis (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_saturday"
+		{
+        	"display"	"Saturday (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_sinister2_vg"
+		{
+        	"display"	"Sinister (Surf)"
+        	"min_players"   "1"
+        }
+        "surf_spectrum_njv"
+        {
+            "display"   "Spectrum (Surf)"
+            "min_players"   "1"
+        }
+        "surf_tempest"
+		{
+        	"display"	"Tempest (Surf)"
+        }
+		//"surf_tensile_njv"
+		//{
+        //	"display"	"Tensile (Surf)"
+        //}
+        "surf_lt_unicorn_fix"
+		{
+        	"display"	"Unicorn (Surf)"
+        	"min_players"   "1"
+        }
     }
 }

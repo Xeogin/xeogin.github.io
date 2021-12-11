@@ -12,14 +12,14 @@ WeaponData
 	"bucket_360"			"0"
 	"bucket_position_360"	"2"
 
-	"clip_size"				"1"
-	"default_clip"			"5"
-	"primary_ammo"			"XBowBolt"
+	"clip_size"				"1" 		//Def. 1
+	"default_clip"			"5" 		//Def. 5
+	"primary_ammo"			"XBowBolt" 	//Def. XBowBolt
 	"secondary_ammo"		"None"
 
 	"weight"				"5"
 	"item_flags"			"1"
-	"damage"				"100"
+	"damage"				"1500" //2000
 	"autoswitchfrom"		"1"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)

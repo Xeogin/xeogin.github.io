@@ -1,0 +1,30 @@
+"Phrases"
+{
+	"NCTC_P_Enabled"
+	{
+		"en"			"Teammate collisions are permanently Enabled."
+		"fr"			"Les collisions entre co-équipiers sont activées en permanence."
+	}
+	"NCTC_P_Disabled"
+	{
+		"en"			"Teammate collisions are permanently Disabled."
+		"fr"			"Les collisions entre co-équipiers sont désactivées en permanence."
+	}
+	"NCTC_Enabled"
+	{
+		"en"			"Teammate collisions are now Enabled."
+		"fr"			"Les collisions entre co-équipiers sont à présent activées"
+	}
+	"NCTC_Disabled"
+	{
+		"#format"		"{1:s}{2:0.1f}{3:s}"
+		"en"			"Teammate collisions are Disabled for {1}{2} {3}seconds."
+		"fr"			"Les collisions entre co-équipiers sont désactivées pendant {1}{2} {3}secondes."
+	}
+	"NCTC_Moved"
+	{
+		"en"			"You have been moved to prevent a collision with a teammate."
+		"fr"			"Tu as été déplacé pour éviter un blocage avec un co-équipier."
+	}
+}
+

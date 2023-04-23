@@ -1,8 +1,0 @@
-LightmappedGeneric
-{
-	"$basetexture"	"metal\drtrimb"
-	"$envmap" "env_cubemap"
-	"$envmapmask" "metal\drtrimb_ref"
-	"$surfaceprop" "metal"
-
-}

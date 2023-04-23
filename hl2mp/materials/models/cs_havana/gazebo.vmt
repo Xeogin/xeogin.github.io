@@ -1,6 +1,0 @@
-"vertexlitGeneric"
-{
-	"$baseTexture" "models/cs_havana/gazebo"
-	"$surfaceprop" "wood"
-	"%keywords" "cstrike"
-}

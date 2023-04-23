@@ -1,6 +1,0 @@
-"unlitGeneric"
-{
-	"$baseTexture" "cs_italy/culighta"
-	"$additive" 1
-	"$detail" "detail/dt_smooth1"
-}

@@ -1,8 +1,0 @@
-"sky"
-{
-	"$hdrbaseTexture" "skybox/train_hdrup"
-	"$nofog" 1
-	"$ignorez" 1
-	"$basetexture" "skybox/trainup" 
-
-}

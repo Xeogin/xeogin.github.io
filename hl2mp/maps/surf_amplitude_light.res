@@ -1,0 +1,15 @@
+"resources"
+{
+"materials/de_train/train_metalceiling_01.vmt" "file"
+"materials/de_train/train_metalceiling_01.vtf" "file"
+"materials/de_train/train_metalceiling_02.vmt" "file"
+"materials/de_train/train_metalceiling_02.vtf" "file"
+"materials/de_train/train_officetile_01.vmt" "file"
+"materials/de_train/train_officetile_01.vtf" "file"
+"materials/liquids/militiawaterbeneath.vmt" "file"
+"materials/liquids/militiawaterbeneath.vtf" "file"
+"materials/metal/metalgrate004a.vmt" "file"
+"materials/metal/metalgrate004a.vtf" "file"
+"materials/metal/prodcaution.vmt" "file"
+"materials/metal/prodcaution.vtf" "file"
+}

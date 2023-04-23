@@ -1,6 +1,0 @@
-VertexLitGeneric
-{
-	"$basetexture"	"models\hostages\hostage_sheet"
-	"$bumpmap" "models\hostages\hostage_sheet_normal"
-
-}

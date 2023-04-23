@@ -1,6 +1,0 @@
-LightmappedGeneric
-{
-	"$basetexture"	"concrete\prodflrd"
-	"$surfaceprop" "concrete"
-	"$bumpmap" "concrete\prodflrb_normal"
-}

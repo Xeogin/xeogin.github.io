@@ -194,48 +194,34 @@
     {
         "default_allow_every"   "60"
         "maps_invote"           "2"
-        "pre-command"           "mp_teamplay 1; sv_gravity 600"
+        "pre-command"           "mp_teamplay 1; sv_gravity 600; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 10; sm_cvar sv_friction 4"
 
-        //"apocalypstreet2"
-        //{
-        //  "display"   "Apocalypse Street (Grav Only)"
-        //}
         "real2ctf_atomicgarden5"
         {
             "display"       "Atomic Garden (CTF)"
             "min_players"   "4"
         }
-        //"z_umi_boatz_v2"
-        //{
-        //    "display"       "Boatz (Fishing)"
-        //    "min_players"   "1"
-        //}
         "ctf_new_test_map_b15_2"
         {
             "display"       "Mini Fort (CTF)"
             "min_players"   "4"
         }
-        //"dm_runoff"
-        //{
-        //    "display"       "Runoff (TDM)"
-        //    "min_players"   "1"
-        //    "max_players"   "3"
-        //}
-        //"z_umizuri_pdef_z2"
-        //{
-        //  "display"   "P (Fishing)"
-        //}
     }
     "Deathmatch"
     {
         "default_allow_every"   "60"
         "maps_invote"           "5"
-        "pre-command"           "mp_teamplay 0; sv_gravity 600"
+        "pre-command"           "sv_gravity 600; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 10; sm_cvar sv_friction 4"
+        //"command"               "sv_gravity 600; sm_cvar sv friction 4"
 
         "dm_1-mag_r1"
         {
             "display"       "1-Mag (DM)"
             "min_players"   "3"
+        }
+        "dm_4c_killbox"
+        {
+            "display"       "4C (DM)"
         }
         "dm_7hour"
         {
@@ -247,15 +233,19 @@
             "display"     "Aim Arena (DM)"
             "min_players"   "1"
         }
-        //"dm_airfusion_final"
-        //{
-        //    "display"   "Airfusion (DM)"
-        //    "min_players"   "3"
-        //}
+        "dm_airfusion_final"
+        {
+            "display"   "Airfusion (DM)"
+            "min_players"   "3"
+        }
         "dm_ancient_rl_b31"
         {
             "display"       "Ancient (DM)"
             "min_players"   "3"
+        }
+        "apocalypstreet2"
+        {
+          "display"         "Apocalypse Street (DM)"
         }
         //"dm_area22"
         //{
@@ -286,10 +276,10 @@
             "display"       "Balcony (DM)"
             "min_players"   "3"
         }
-        //"dm_biohazard_cal"
-        //{
-        //    "display"   "Biohazard (DM)"
-        //}
+        "dm_biohazard_c"
+        {
+            "display"   "Biohazard (DM)"
+        }
         //"dm_blades"
         //{
         //  "display"       "Blades (DM)"
@@ -299,16 +289,21 @@
             "display"       "Bloom (DM)"
             "min_players"   "5"
         }
+        "dm_bk_breenbox2010_rc1"
+        {
+            "display"       "Breen Box (DM)"
+            "min_players"   "3"
+        }
         "dm_campus_beta_bv1"
         {
             "display"       "Campus (DM)"
             "min_players"   "3"
         }
-        //"dm_canals_works_final_beta3"
-        //{
-        //    "display"       "Canals (DM)"
+        "dm_canals_works_final_beta3"
+        {
+            "display"       "Canals (DM)"
         //    "min_players"   "3"
-        //}
+        }
         "dm_carousel"
         {
             "display"       "Carousel (DM)"
@@ -360,10 +355,10 @@
             "display"       "Entrepot (DM)"
             "min_players"   "4"
         }
-        //"dm_ethic"
-        //{
-        //    "display"       "Ethic (DM)"
-        //}
+        "dm_ethic"
+        {
+            "display"       "Ethic (DM)"
+        }
         "dm_fallout"
         {
             "display"       "Fallout (DM)"
@@ -384,6 +379,10 @@
             "display"       "Fuzbeam (DM)"
             "min_players"   "4"
         }
+        "dm_greenhouse"
+        {
+            "display"       "Greenhouse (DM)"
+        }
         "halls3"
         {
             "display"     "Halls (DM)"
@@ -394,6 +393,10 @@
         //    "display"     "Industry Canals (DM)"
         //    "min_players"   "3"
         //}
+        "dm_killhall_003"
+        {
+            "display"       "Kill Hall (DM)"
+        }
         "dm_kin"
         {
             "display"       "Kin (DM)"
@@ -427,6 +430,18 @@
         {
             "display"       "Lost Village (DM)"
             "min_players"   "4"
+        }
+        "dm_magnum_nub_v3e"
+        {
+           "display"        "Magnum Nub (DM)"
+        }
+        "dm-otf-mayhem2-packed"
+        {
+            "display"       "Mayhem (DM)"
+        }
+        "dm_mexicana_b7"
+        {
+            "display"       "Mexicana (DM)"
         }
         "dm_organic_b5"
         {
@@ -471,10 +486,10 @@
             "display"       "Plaza 17 (DM)"
             "min_players"   "3"
         }
-        //"dm_please"
-        //{
-        //    "display"       "Please (DM)"
-        //}
+        "dm_please"
+        {
+            "display"       "Please (DM)"
+        }
         "dm_postoffice"
         {
             "display"       "Post Office (DM)"
@@ -514,6 +529,26 @@
             "display"       "Resistance Hurtlocker (DM)"
             "min_players"   "3"
         }
+        "dm_dgc_ruins_v3"
+        {
+            "display"           "Ruins (DM)"
+            "min_players"       "3"
+        }
+        "dm_runoff"
+        {
+            "display"       "Runoff (DM)"
+            "min_players"   "1"
+            //"max_players"   "3"
+        }
+        "dm_snowfall_beta3"
+        {
+            "display"           "Snowfall (DM)"
+        }
+        "dm_station"
+        {
+            "display"           "Station (DM)"
+            "max_players"       "4"
+        }
         "dm_steamlab"
         {
             "display"     "Steam Lab (DM)"
@@ -542,6 +577,10 @@
         {
             "display"       "Tigcrik Extension (DM)"
             "min_players"   "3"
+        }
+        "dm_g23_transport_inc_b2"
+        {
+            "display"           "Transport Inc. (DM)"
         }
         "dm_undercastle_r1"
         {
@@ -603,20 +642,47 @@
             "min_players"   "4"
         }
     }
+    //"Fishing"
+    //{
+        //"default_allow_every"   "60"
+        //"maps_invote"           "1"
+        //"pre-command"           "mp_teamplay 1; sv_gravity 600; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 10; sm_cvar sv_friction 4"
+
+        //"z_umi_boatz_v2"
+        //{
+        //    "display"       "Boatz (Fishing)"
+        //    "min_players"   "1"
+        //}
+        //"z_umizuri_pdef_z2"
+        //{
+        //  "display"   "P (Fishing)"
+        //}
+    //}
+    "Football"
+    {
+        "default_allow_every"   "60"
+        "maps_invote"           "1"
+        "pre-command"           "mp_teamplay 1; sv_gravity 600; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 10; sm_cvar sv_friction 4"
+
+        "fb_football_b12"
+        {
+          "display"   "B12 (Football)"
+        }
+    }
     "Jumps"
     {
     	"default_allow_every"   "60"
         "maps_invote"           "4"
-        "pre-command"           "mp_teamplay 0; sv_gravity 600"
+        "pre-command"           "mp_teamplay 0; sv_gravity 600; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 10; sm_cvar sv_friction 4"
 
         "academy_nubjumper_v6"
 		{
 			"display"	"Academy Jumper (Jumps)"
 		}
-        //"ancient_jumps_nub"
-        //{
-        //    "display"   "Ancient Jumps (Jumps)"
-        //}
+        "ancient_jumps_nub"
+        {
+            "display"   "Ancient Jumps (Jumps)"
+        }
 		//"tr_briggs_jumpmap_r2"
 		//{
 		//	"display"	"Brigg's Jump (Jumps)"
@@ -625,23 +691,23 @@
 		//{
 		//	"display"	"Bunny Ruins (Jumps)"
 		//}
-        //"jm_jumpscolors_b9"
-        //{
-        //    "display"   "Colors (Jumps)"
-        //    "min_players"   "1"
-        //}
-        //"jm_jumpdifferent_v07"
-        //{
-        //    "display"   "Jump Different (Jumps)"
-        //}
+        "jm_jumpscolors_b9"
+        {
+            "display"   "Colors (Jumps)"
+            "min_players"   "1"
+        }
+        "jm_jumpdifferent_v07"
+        {
+            "display"   "Jump Different (Jumps)"
+        }
 		"jumpstyle_nub_v1"
 		{
 			"display"	"Jumpstyle (Jumps)"
 		}
-		//"jm_kenira"
-		//{
-		//	"display"	"Kenira (Jumps)"
-		//}
+		"jm_kenira"
+		{
+			"display"	"Kenira (Jumps)"
+		}
 		"ju_loip104_jumping_finished"
 		{
 			"display"	"Loip Jumping (Jumps)"
@@ -661,103 +727,103 @@
 		//	"display"	"Mozi 6-8 (Jumps)"
 		//	"min_players"   "1"
 		//}
-        //"jm_originalsjumps_b3"
-        //{
-        //    "display"   "Original's Jumps (Jumps)"
-        //    "min_players"   "1"
-        //}
+        "jm_originalsjumps_b3"
+        {
+            "display"   "Original's Jumps (Jumps)"
+            "min_players"   "1"
+        }
 		"tr_ptrain_b02_d"
 		{
 			"display"	"P Train (Jumps)"
 		}
-        //"jm_psyjumps_r1"
-        //{
-        //    "display"   "Psy Jumps (Jumps)"
-        //}
-		//"stylejumps_tkm_b5"
-		//{
-		//	"display"	"Style Jumps (Jumps)"
-		//}
-		//"ultimatejumps_gold"
-		//{
-		//	"display"	"Ultimate Jumps (Jumps)"
-		//}
-    }
-    "Low Grav Deathmatch"
-    {
-    	"default_min_players"   "2"
-        "default_allow_every"   "60"
-        "maps_invote"           "5"
-        "pre-command"           "mp_teamplay 0; sv_gravity 280"
-
-    	//"dm_killbox_2014_rc1"
-    	//{
-    	//	"display"	"2014 (Killbox)"
-    	//}
-    	//"dm_4c_killbox_b2"
-		//{
-		//	"display"	"4C (Killbox)"
-		//}
-		"dm_killbox_air_skm"
+        "jm_psyjumps_r1"
+        {
+            "display"   "Psy Jumps (Jumps)"
+        }
+		"stylejumps_tkm_b5"
 		{
-			"display"	"Air (Killbox)"
+			"display"	"Style Jumps (Jumps)"
 		}
+		"ultimatejumps_gold"
+		{
+			"display"	"Ultimate Jumps (Jumps)"
+		}
+    }
+    "Killbox"
+    {
+        "default_allow_every"   "60"
+        "default_min_players"   "2"
+        "maps_invote"           "5"
+        "pre-command"           "mp_teamplay 0; sv_gravity 280; sm_cvar sv_accelerate 15; sm_cvar sv_airaccelerate 20; sm_cvar sv_friction 3"
+
+    	"dm_killbox_2014_rc1"
+    	{
+    		"display"	"2014 (Killbox)"
+    	}
+		//"dm_killbox_air_skm"
+		//{
+		//	"display"	"Air (Killbox)"
+		//}
     	"dm_killbox_alpha_bcc_b2"
     	{
     		"display"	"Alpha (Killbox)"
     	}
-    	"dm_killbox_arena_skm"
-    	{
-    		"display"	"Arena (Killbox)"
-    	}
-    	//"dm_killroof_big_snoopy_v6"
-		//{
-		//	"display"	"Big Snoopy (Killbox)"
-		//	"min_players"   "3"
-		//}
-    	"dm_bs_bloodbox_final"
-        {
-            "display"    "Blood Box (Killbox)"
-        }
-        //"dm_bk_breenbox2010_rc1"
+    	//"dm_killbox_arena_skm"
+    	//{
+    	//	"display"	"Arena (Killbox)"
+    	//}
+    	"dm_killroof_big_snoopy_v6"
+		{
+			"display"	"Big Snoopy (Killbox)"
+			"min_players"   "3"
+		}
+    	//"dm_bs_bloodbox_final"
         //{
-        //    "display"   "Breen Box (Killbox)"
-        //    "min_players"   "3"
+        //    "display"    "Blood Box (Killbox)"
         //}
         "dm_killbox_coldblood_ss"
         {
         	"display"     "Cold Blood (Killbox)"
         	"min_players" "3"
         }
-        //"dm_bk_coldbox_rc2"
-        //{
-        //    "display"   "Cold Box (Killbox)"
-        //}
-		"dm_killbox_corridors_skm"
-		{
-			"display"     "Corridors (Killbox)"
-			"min_players" "4"
-		}
-		"dm_killbox_dev_skm"
-		{
-			"display"     "Dev (Killbox)"
-		}
+        "dm_bk_coldbox_rc2"
+        {
+            "display"   "Cold Box (Killbox)"
+        }
+        "dm_killbox_coldinhere01_tko"
+        {
+            "display"       "Cold In Here (Killbox)"
+        }
+		//"dm_killbox_corridors_skm"
+		//{
+		//	"display"     "Corridors (Killbox)"
+		//	"min_players" "4"
+		//}
+		//"dm_killbox_dev_skm"
+		//{
+		//	"display"     "Dev (Killbox)"
+		//}
 		"dm_killbox_[dmk]_b6"
 		{
 			"display"     "DMK (Killbox)"
 		}
-		"dm_killbox_domination_skm"
-		{
-			"display"     "Domination (Killbox)"
-		}
+		//"dm_killbox_domination_skm"
+		//{
+		//	"display"     "Domination (Killbox)"
+		//}
 		"dm_killbox_e_tko"
 		{
 			"display"     "E (Killbox)"
 		}
-		"dm_killbox_final_emc2_skm"
-		{
-			"display"     "EMC (Killbox)"
-		}
+		//"dm_killbox_final_emc2_skm"
+		//{
+		//	"display"     "EMC (Killbox)"
+		//}
+        "dm_bk_expected_dev_rc1"
+        {
+            "display"       "Expected (Killbox)"
+            //"min_players"   "3"
+        }
     	"dm_killbox_fraggies_b3"
     	{
     		"display"     "Fraggies (Killbox)"
@@ -766,10 +832,10 @@
 		{
 			"display"     "Hackn' (Killbox)"
 		}
-		"dm_killbox_kbh_2_skm"
-		{
-			"display"     "KBH 2 (Killbox)"
-		}
+		//"dm_killbox_kbh_2_skm"
+		//{
+		//	"display"     "KBH 2 (Killbox)"
+		//}
 		"dm_bk_lambda_box_rc1"
     	{
     		"display"     "Lambda Box (Killbox)"
@@ -779,126 +845,248 @@
     	//{
     	//	"display"	"Layercake (Killbox)"
     	//}
-    	"dm_killbox_marble_skm"
-    	{
-    		"display"     "Marble (Killbox)"
-    	}
-    	//"dm-otf-mayhem2-packed"
-		//{
-		//	"display"	"Mayhem (Killbox)"
-		//}
+    	//"dm_killbox_marble_skm"
+    	//{
+    	//	"display"     "Marble (Killbox)"
+    	//}
     	//"asc_mp_killbox2_v11"
 		//{
 		//	"display"	"MP (Killbox)"
 		//}
-		"dm_killbox_n9ne_skm"
-		{
-			"display"	   "N9ne (Killbox)"
-		}
+		//"dm_killbox_n9ne_skm"
+		//{
+		//	"display"	   "N9ne (Killbox)"
+		//}
 		"dm_killbox_native02_tko"
 		{
 			"display"	   "Native (Killbox)"
 		}
-		"dm_killbox_ownage_skm"
-		{
-			"display"	   "Ownage (Killbox)"
-		}
-		"dm_killbox_realm_skm"
-		{
-			"display"	   "Realm (Killbox)"
-		}
+		//"dm_killbox_ownage_skm"
+		//{
+		//	"display"	   "Ownage (Killbox)"
+		//}
+		//"dm_killbox_realm_skm"
+		//{
+		//	"display"	   "Realm (Killbox)"
+		//}
 		"dm_killroof2_b3"
 		{
 			"display"	   "Roof (Killbox)"
 		}
-		"dm_killbox_sci_skm"
-		{
-			"display"	   "Sci (Killbox)"
-		}
-		"dm_killbox_shootery_skm"
-		{
-			"display"	   "Shootery (Killbox)"
-			"min_players"  "4"
-		}
+		//"dm_killbox_sci_skm"
+		//{
+		//	"display"	   "Sci (Killbox)"
+		//}
+		//"dm_killbox_shootery_skm"
+		//{
+		//	"display"	   "Shootery (Killbox)"
+		//	"min_players"  "4"
+		//}
 		"dm_killbox_snipereye_2"
         {
             "display"	  "Sniper Eye (Killbox)"
         }
-		"dm_killbox_trees_skm"
-		{
-			"display"	   "Trees (Killbox)"
-		}
-		"dm_killbox_unfound_skm"
-		{
-			"display"	   "Unfound (Killbox)"
-		}
-		"dm_killbox_vertigo_skm"
-		{
-			"display"	   "Vertigo (Killbox)"
-		}
-		"dm_killbox_rac_volts_skm"
-		{
-			"display"	   "Volts (Killbox)"
-		}
-		"dm_killbox_weee_skm"
-		{
-			"display"		"Weee! (Killbox)"
-		}
-		"dm_killbox_whichway_skm"
-		{
-			"display"		"Which Way? (Killbox)"
-			"min_players"   "3"
-		}
-		//"dm_killbox_whitestyle"
-		//{
-		//	"display"		"Whitestyle (Killbox)"
-		//}
-        "dm_killbox_coldinhere01_tko"
-        {
-            "display"       "Cold In Here (Killbox)"
-        }
-        "dm_bk_expected_dev_rc1"
-        {
-            "display"       "Expected (Killbox)"
-            //"min_players"   "3"
-        }
-        "dm_greenhouse"
-        {
-            "display"       "Greenhouse (Killbox)"
-        }
-        "dm_killhall_003"
-        {
-            "display"       "Kill Hall (Killbox)"
-        }
-        //"dm_magnum_nub_v3e"
-        //{
-        //   "display"  "Magnum Nub (Killbox)"
-        //}
-        "dm_mexicana_b7"
-        {
-            "display"       "Mexicana (Killbox)"
-        }
-        "dm_dgc_ruins_v3"
-        {
-            "display"       "Ruins (Killbox)"
-            "min_players"   "3"
-        }
-        "dm_snowfall_beta3"
-        {
-            "display"       "Snowfall (Killbox)"
-        }
-        //"dm_station"
-        //{
-        //    "display"     "Station (Killbox)"
-        //    "max_players"   "4"
-        //}
         "dm_tox_ug"
         {
             "display"       "Tox (Killbox)"
         }
-        //"dm_g23_transport_inc_b2"
+		//"dm_killbox_trees_skm"
+		//{
+		//	"display"	   "Trees (Killbox)"
+		//}
+		//"dm_killbox_unfound_skm"
+		//{
+		//	"display"	   "Unfound (Killbox)"
+		//}
+		//"dm_killbox_vertigo_skm"
+		//{
+		//	"display"	   "Vertigo (Killbox)"
+		//}
+		//"dm_killbox_rac_volts_skm"
+		//{
+		//	"display"	   "Volts (Killbox)"
+		//}
+		//"dm_killbox_weee_skm"
+		//{
+		//	"display"		"Weee! (Killbox)"
+		//}
+		//"dm_killbox_whichway_skm"
+		//{
+		//	"display"		"Which Way? (Killbox)"
+		//	"min_players"   "3"
+		//}
+		//"dm_killbox_whitestyle"
+		//{
+		//	"display"		"Whitestyle (Killbox)"
+		//}
+
+    }
+    "Surf"
+    {
+        "default_allow_every"   "60"
+        "maps_invote"           "3"
+        "pre-command"           "mp_teamplay 0; sv_gravity 600; sm_cvar sv_accelerate 10; sm_cvar sv_airaccelerate 200; sm_cvar sv_friction 4"
+
+        "surf_ace"
+        {
+            "display"     "Ace (Surf)"
+        }
+        "surf_auroria2_vg"
+        {
+            "display"     "Auroria (Surf)"
+            "min_players"   "1"
+        }
+        "surf_beginner_v5_vg"
+        {
+            "display"     "Beginner (Surf)"
+        }
+        "surf_beverages"
+        {
+            "display"   "Beverages (Surf)"
+            "min_players"   "1"
+        }
+        "surf_bluewinter_vg"
+        {
+            "display"   "Blue Winter (Surf)"
+            "min_players"   "1"
+        }
+        "surf_bob_hl2dm"
+        {
+            "display"   "Bob (Surf)"
+            "min_players"   "1"
+        }
+        "surf_calycate_vg"
+        {
+            "display"   "Calycate (Surf)"
+            "min_players"   "1"
+        }
+        "surf_dragon"
+        {
+            "display"   "Dragon (Surf)"
+            "min_players"   "1"
+        }
+        "surf_dream_v3"
+        {
+            "display"   "Dream (Surf)"
+            "min_players"   "1"
+        }
+        "surf_driftless"
+        {
+            "display"   "Driftless (Surf)"
+            "min_players"   "1"
+        }
+        //"surf_map_emc2_v1"
         //{
-        //    "display"   "Transport Inc. (Killbox)"
+        //    "display"   "EMC2 (Surf)"
+        //    "min_players"   "1"
+        //}
+        "surf_ethereal_vg"
+        {
+            "display"   "Ethereal (Surf)"
+            "min_players"   "1"
+        }
+        "surf_exurbia_v2f_vg"
+        {
+            "display"   "Exurbia (Surf)"
+            "min_players"   "1"
+        }
+        //"surf_fast"
+        //{
+        //    "display"   "Fast (Surf)"
+        //    "min_players"   "1"
+        //}
+        //"surf_friday"
+        //{
+        //    "display"   "Friday (Surf)"
+        //    "min_players"   "1"
+        //}
+        "surf_fruits"
+        {
+            "display"   "Fruits (Surf)"
+        }
+        "surf_guitar_hi"
+        {
+            "display"   "Guitar (Surf)"
+            "min_players"   "1"
+        }
+        //"surf_island"
+        //{
+        //    "display"   "Island (Surf)"
+        //    "min_players"   "1"
+        //}
+        "surf_kz_mix_journeys"
+        {
+            "display"   "Journeys (Surf)"
+            "min_players"   "1"
+        }
+        "surf_kitsune"
+        {
+            "display"   "Kitsune (Surf)"
+            "min_players"   "1"
+        }
+        //"mag_surf2"
+        //{
+        //  "display"   "Mag (Surf)"
+        //}
+        "surf_milkyway"
+        {
+            "display"   "Milkyway (Surf)"
+            "min_players"   "1"
+        }
+        "surf_noble_f_vg"
+        {
+            "display"   "Noble (Surf)"
+            "min_players"   "1"
+        }
+        "surf_lt_omnific"
+        {
+            "display"   "Omnific (Surf)"
+        }
+        "surf_pluckin_v11"
+        {
+            "display"   "Pluckin (Surf)"
+        }
+        //"surf_pox_njv_vg"
+        //{
+        //  "display"   "Pox (Surf)"
+        //    "min_players"   "2"
+        //}
+        "surf_reflex_b4b"
+        {
+            "display"   "Reflex (Surf)"
+        }
+        "surf_refraxis_dm"
+        {
+            "display"   "Refraxis (Surf)"
+            "min_players"   "1"
+        }
+        "surf_saturday"
+        {
+            "display"   "Saturday (Surf)"
+            "min_players"   "1"
+        }
+        "surf_sinister2_vg"
+        {
+            "display"   "Sinister (Surf)"
+            "min_players"   "1"
+        }
+        "surf_spectrum_njv"
+        {
+            "display"   "Spectrum (Surf)"
+            "min_players"   "1"
+        }
+        "surf_tempest"
+        {
+            "display"   "Tempest (Surf)"
+        }
+        //"surf_tensile_njv"
+        //{
+        //  "display"   "Tensile (Surf)"
+        //}
+        //"surf_lt_unicorn_fix"
+        //{
+        //    "display"   "Unicorn (Surf)"
+        //    "min_players"   "1"
         //}
     }
 }

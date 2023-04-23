@@ -1,8 +1,0 @@
-"VertexLitGeneric"
-{
-//	"$alphatest" 1
-//	"$translucent" 1
-	"$basetexture" "Models/props_industrial/oil_pipes"
-//	"$bumpmap" "Models/props_industrial/oil_pipes_normal"
-	
-}

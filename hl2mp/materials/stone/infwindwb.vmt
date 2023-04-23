@@ -1,8 +1,0 @@
-LightmappedGeneric
-{
-	"$basetexture"	"stone\infwindwb"
-	"$surfaceprop" "stone"
-	"$envmap"	"env_cubemap"
-	"$envmapmask"	"stone\infwindwb_ref"
-
-}

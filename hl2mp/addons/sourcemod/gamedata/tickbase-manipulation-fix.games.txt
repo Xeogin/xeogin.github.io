@@ -1,0 +1,125 @@
+"Games"
+{
+	// CPlayerMove::RunCommand contains string "sv_maxusrcmdprocessticks_warning at server tick" 
+	// in some games and/or references sv_noclipduringpause
+	"#default"
+	{
+		"Signatures"
+		{
+			"CPlayerMove::RunCommand"
+			{
+				"library"		"server"
+				"windows"		"\x55\x8B\xEC\x83\xEC\x28\xF3\x0F\x10\x1D\x2A\x2A\x2A\x2A\x56\x57\x8B\x7D\x08"
+				"linux"			"@_ZN11CPlayerMove10RunCommandEP11CBasePlayerP8CUserCmdP11IMoveHelper"
+			}
+		}
+
+		"Functions"
+		{
+			"CPlayerMove::RunCommand"
+			{
+				"signature"  "CPlayerMove::RunCommand"
+				"callconv"  "thiscall"
+				"return"  "void"
+				"this"  "address"
+				"arguments"
+				{
+					"player"
+					{
+						"type"  "cbaseentity"
+					}
+					"cmd"
+					{
+						"type"	"objectptr"
+					}
+					"movehelper"
+					{
+						"type"	"objectptr"
+					}
+				}
+			}
+		}
+	}
+
+	/* Team Fortress 2 */
+	"tf"
+	{
+		"Signatures"
+		{
+			"CPlayerMove::RunCommand"
+			{
+				"windows"		"\x55\x8B\xEC\x83\xEC\x1C\x56\x57\x8B\x7D\x08\x89\x4D\xFC\x8B\xB7\x2A\x08\x00\x00"
+			}
+		}
+	}
+
+	/* Left 4 Dead 2 */
+	"left4dead2"
+	{
+		"Signatures"
+		{
+			"CPlayerMove::RunCommand"
+			{
+				"windows"		"\x55\x8B\xEC\x53\x56\x8B\x75\x08\x57\x8B\x7D\x0C\x8B\xD9\x8B\x03"
+			}
+		}
+	}
+
+	/* Contagion */
+	"contagion"
+	{
+		"Signatures"
+		{
+			"CPlayerMove::RunCommand"
+			{
+				"windows"		"\x55\x8B\xEC\x51\x8B\x01\x56\x8B\x75\x08\x57\x8B\x7D\x0C"
+			}
+		}
+	}
+
+	/* Day of Defeat: Source */
+	"dod"
+	{
+		"Signatures"
+		{
+			"CPlayerMove::RunCommand"
+			{
+				"windows"		"\x55\x8B\xEC\x83\xEC\x28\xF3\x0F\x10\x1D\x2A\x2A\x2A\x2A\x56\x57\x8B\x7D\x08"
+			}
+		}
+	}
+
+	/* Pirates, Vikings, and Knights II */
+	"pvkii"
+	{
+		"Signatures"
+		{
+			"CPlayerMove::RunCommand"
+			{
+				"windows"		"\x55\x8B\xEC\x83\xEC\x28\xA1\x2A\x2A\x2A\x2A\x0F\x57\xDB\x56\x57\x8B\x7D\x08"
+			}
+		}
+	}
+
+	/* Zombie Panic! Source (2.4) */
+	"zps"
+	{
+		"CRC"
+		{
+			"server"
+			{
+				// As of August 13, 2022
+				"linux"  "97517D9F"
+				"windows" "18067D48"
+			}
+		}
+		
+		"Signatures"
+		{
+			"CPlayerMove::RunCommand"
+			{
+				"windows"		"\x55\x8B\xEC\x83\xEC\x1C\xA1\x2A\x2A\x2A\x2A\xF3\x0F\x10\x1D\x2A\x2A\x2A\x2A\x56"
+			}
+		}
+	}
+}

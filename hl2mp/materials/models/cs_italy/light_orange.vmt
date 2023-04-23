@@ -1,6 +1,0 @@
-"unlitGeneric"
-{
-	"$baseTexture" "models/cs_italy/light_orange"
-	"$model" 1
-	"$surfaceprop" "glass"
-}

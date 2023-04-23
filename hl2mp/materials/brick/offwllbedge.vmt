@@ -1,6 +1,0 @@
-LightmappedGeneric
-{
-	"$basetexture"	"brick/offwllbedge"
-	"$surfaceprop" "concrete_block"
-	"$bumpmap" "brick/offwllbedge_normal"
-}

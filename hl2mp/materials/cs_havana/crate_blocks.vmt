@@ -1,5 +1,0 @@
-"vertexlitgeneric"
-{
-	"$baseTexture" "models/de_dust/crates/crate_blocks"
-	"$surfaceprop" "rock"
-}

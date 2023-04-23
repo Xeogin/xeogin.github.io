@@ -1,8 +1,0 @@
-LightmappedGeneric
-{
-	"$basetexture"	"tile\milflr001"
-	"$envmap" "env_cubemap"
-	"$envmapmask" "tile\milflr001_ref"
-	"$surfaceprop" "rubber"
-
-}

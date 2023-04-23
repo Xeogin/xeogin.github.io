@@ -1,6 +1,0 @@
-"VertexLitGeneric"
-{
-	"$baseTexture" "models/pi_twig/twig"
-	"$translucent" 1
-	"$alphatest" 1
-}

@@ -1,7 +1,0 @@
-LightmappedGeneric
-{
-	"$basetexture"	"tools\invismetal"
-	"$translucent" "1"
-	"$surfaceprop" "metal"
-	"%compilenodraw" 1
-}

@@ -1,9 +1,0 @@
-LightmappedGeneric
-{
-	"$basetexture"	"brick\offwllb"
-	"$surfaceprop" "concrete_block"
-	"$bumpmap" "brick/offwllb_normal"
- 	"$envmap" "env_cubemap"
-	"$envmapcontrast" "1"
-	"$normalmapalphaenvmapmask" "1"
-}

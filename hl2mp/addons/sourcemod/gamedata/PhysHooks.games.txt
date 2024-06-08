@@ -1,0 +1,66 @@
+"Games"
+{
+	"#default"
+	{
+		"#supported"
+		{
+			"game"		"hl2mp"
+			"engine"	"orangebox_valve"
+		}
+		"Signatures"
+		{
+			"Physics_RunThinkFunctions"
+			{
+				"library"	"server"
+				"linux"		"@_Z25Physics_RunThinkFunctionsb"
+			}
+
+			"Physics_SimulateEntity"
+			{
+				"library"	"server"
+				"linux"		"@_Z22Physics_SimulateEntityP11CBaseEntity"
+			}
+
+			"CTriggerMoved"
+			{
+				"library"	"engine"
+				"linux"		"@_ZTV13CTriggerMoved"
+			}
+
+			"CTouchLinks"
+			{
+				"library"	"engine"
+				"linux"		"@_ZTV11CTouchLinks"
+			}
+		}
+	}
+	"csgo"
+	{
+		"Signatures"
+		{
+			"Physics_RunThinkFunctions"
+			{
+				"library"	"server"
+				"linux"		"\x55\x89\xE5\x57\x56\x53\x83\xEC\x4C\xA1\x2A\x2A\x2A\x2A\x0F\xB6\x5D\x08"
+			}
+
+			"Physics_SimulateEntity"
+			{
+				"library"	"server"
+				"linux"		"\x55\x89\xE5\x57\x56\xBE\x2A\x2A\x2A\x2A\x53\x83\xEC\x4C\xA1\x2A\x2A\x2A\x2A"
+			}
+
+			"CTriggerMoved"
+			{
+				"library"	"engine"
+				"linux"		"13CTriggerMoved"
+			}
+
+			"CTouchLinks"
+			{
+				"library"	"engine"
+				"linux"		"11CTouchLinks"
+			}
+		}
+	}
+}

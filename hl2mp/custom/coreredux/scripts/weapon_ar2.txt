@@ -13,7 +13,7 @@ WeaponData
 	"bucket_position_360"	"2"
 
 	"clip_size"				"30"
-	"default_clip"			"60"
+	"default_clip"			"90"
 
 	"clip2_size"			"-1"
 	"default_clip2"			"-1"
@@ -21,11 +21,11 @@ WeaponData
 	"primary_ammo"			"AR2"
 	"secondary_ammo"		"AR2AltFire"
 
-	"weight"				"6"
+	"weight"				"6" //Def. 5
 	"rumble"				"4"
-	"item_flags"			"32"
-	"damage"				"16"
-	"autoswitchfrom"		"1"
+	"item_flags"			"32" //Def. 0
+	"damage"				"15" //Def. 11
+	"autoswitchfrom"		"1" //Def. 0
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

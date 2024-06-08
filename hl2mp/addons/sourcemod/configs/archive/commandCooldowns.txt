@@ -1,0 +1,83 @@
+"CommandCooldowns"
+{
+    "sm_command sm_someothercommand"
+    {
+        "cooldown" 	"10"
+        "flags" 	"abcdefghijklmnopqrstz"
+        //If no "override" is specified, or the override cannot be found, these flags are used instead for cooldown bypass. The user must have all of these flags to bypass the cooldown (or just the 'z' flag)
+
+        //In short:
+        //* If you specify an override that exists (either as an actual override or a command), then that override's access level will be
+        //  used as the access requirement for cooldown bypass.
+        //* If you specify neither a flag NOR an overrride, then no one can get around the cooldown, not even root admins.
+        //* If you specify an override that doesn't exist, and DO NOT specify any flags, then EVERYONE can get around the cooldown.
+
+        "disabled" 	"1"
+        //If set, the cooldown will be stored, but won't actually do anything. This will be useful in a future update.
+
+        "clientcmd" 	"say I'm a huge dummy"
+        //Command to be run by the user (through FakeClientCommand()) when using the command too soon.
+
+        //"reply", "showactivity", "servercmd", and "clientcmd" all support the following text substitutions
+        //{TIMELEFT} will be replaced by the number of seconds left on the cooldown
+        //{COMMAND_NAME} will be replaced by the command that was used, which is useful if more than 1 command is sharing the cooldown.
+        //{COOLDOWN_TIME} will be replaced by the total length of the cooldown
+        //{USERID} will be replaced by the user's user ID according to the engine.
+        //{USERNAME} will be replaced by the user's current display name on the server.
+        //"reply" and "showactivity" both support colors through morecolors.inc
+
+        "plugin" 	"somePlugin.smx"
+        //The "plugin" key is only to be used if the command you want to apply a cooldown to was created through
+        //AddCommandListener() rather than a Reg*Cmd() function. If you notice that players bypass the cooldown, but
+        //they are still able to see the "reply", you will need to specify the plugin here.
+        //The plugin that is listed here will be RESTARTED once CommandCooldowns finished loading the txt file
+        //(depending on the setting of the cvar sm_commandcooldowns_reloadplugins). This is necessary because
+        //CommandCooldowns must register the command listener BEFORE the other plugin does, or the cooldown will not work.
+    }
+	"jointeam spectate"
+	//Specify what command(s) to apply a cooldown to. Commands are seperated with a space and SHARE the cooldown
+	{
+		"cooldown" 	"5"
+		"override" 	"spec"
+		//The time it takes for the command(s) to be usable again. This is the only mandatory key
+		"reply" 	"You must wait {TIMELEFT} more seconds before attempting to switch teams again"
+		//This is the message that the user will see when trying to use the command too soon. This is run through ReplyToCommand();
+        //If you do not specify this, the default text is "You must wait {TIMELEFT} seconds!"
+        //Putting nothing ( "" ) between the quotation marks will disable the reply entirely. 
+	}
+	"sm_reloadadmins"
+	{
+		"cooldown" 	"30"
+		"shared" 	"1"
+		"reply" 	"Please wait {COOLDOWN_TIME} more seconds before attempting to reload admins again"
+		//If "shared" is set to "1", then the cooldown timer is SHARED BETWEEN ALL PLAYERS.
+        //This means that, assuming a command has a 60 second cooldown, once a player uses that command,
+        //HE AND ALL OTHER PLAYERS will have to wait 60 seconds before using that command.
+        //Leaving out the "shared" line entirely is the same as putting a "0" in there.
+        //It might not be a good idea to use both "shared" and "reset" together on one cooldown.
+	}
+	"sm_randomCommand"
+	{
+		"cooldown" 		"10"
+		"showactivity" 	"tried to use {COMMAND_NAME} too soon!"
+		//Anything set here will be run through CShowActivity2
+		"servercmd" 	"sm_slay #{USER_ID}"
+		//Command to be run by the server when a user uses the command too soon.
+	}
+	"explode kill"
+	{
+		"cooldown" 	"10"
+		"override" 	"stuck"
+		//A player with access to the command or override listed here can bypass the cooldown
+	}
+	"duck"
+	{
+		"cooldown" 	"1"
+		"reset" 	"1"
+		"reply" 	"Duck cooldown test successful"
+		//If "reset" is set to 1, the cooldown will RESTART if the user tries to use it too early.
+        //For example, if a command has a 10 second cooldown, and a player uses the command once, and then once
+        //again after only 4 seconds, then 6 seconds will be added to the cooldown.
+        //Leaving out the "reset" line entirely is the same as putting a "0" in there.
+	}
+}

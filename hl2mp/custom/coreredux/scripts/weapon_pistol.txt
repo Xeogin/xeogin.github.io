@@ -15,13 +15,13 @@ WeaponData
 	"clip_size"				"18"
 	"primary_ammo"			"Pistol"
 	"secondary_ammo"		"None"
-	"default_clip"			"18"
+	"default_clip"			"152" //Def. -1?
 
 	"weight"				"2"
 	"rumble"				"1"
-	"item_flags"			"32"
-	"damage"				"12"
-	"autoswitchfrom"		"1"
+	"item_flags"			"32" //Def. 0
+	"damage"				"12" //Def. 8
+	"autoswitchfrom"		"1" //Def. 0
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

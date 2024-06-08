@@ -11,15 +11,15 @@ WeaponData
 	"bucket_position"		"2"
 
 	"clip_size"				"3"
-	"default_clip2"			"1"
+	"default_clip2"			"1" //Def. 3
 
 	"primary_ammo"			"None"
 	"secondary_ammo"		"slam"
 
 	"weight"				"1"
-	"item_flags"			"32"
-	"damage"				"260" //300
-	"autoswitchfrom"		"1"
+	"item_flags"			"2" //Def. 2
+	//"damage"				"260" //Def. 300?
+	"autoswitchfrom"		"1" //Def. 0
 
 	// Weapon Sprite data is loaded by the Client DLL.
 	TextureData

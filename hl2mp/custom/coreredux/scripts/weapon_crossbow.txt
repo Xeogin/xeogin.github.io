@@ -12,15 +12,17 @@ WeaponData
 	"bucket_360"			"0"
 	"bucket_position_360"	"2"
 
-	"clip_size"				"1" 		//Def. 1
-	"default_clip"			"5" 		//Def. 5
-	"primary_ammo"			"XBowBolt" 	//Def. XBowBolt
+	//To make fast-fire with no ammo counter, comment out "default_clip" & "primary_ammo" then set "clip_size" to a large value, like 999 for near infinite
+	"clip_size"				"1"
+	"default_clip"			"11" //Def. 5
+	"default_clip2" 		"-1"
+	"primary_ammo"			"XBowBolt"
 	"secondary_ammo"		"None"
 
-	"weight"				"5"
-	"item_flags"			"1"
-	"damage"				"1500" //2000
-	"autoswitchfrom"		"1"
+	"weight"				"5" //Def. 6
+	"item_flags"			"1" //Def. 0
+	"damage"				"100" //Def. 100
+	"autoswitchfrom"		"1" //Def. 0
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

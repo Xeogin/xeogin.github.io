@@ -106,16 +106,16 @@
 		"sound"		""
 		"streak"	"1"
 	}
-	"HEADSHOT"
-	{
-		"eventkey"	"headshot"
-		"type"		"kill"
-		"weapon"	"shotgun"
-		"mode"		"4"
-		"text"		"%a filled your head with lead"
-		"sound"		""
-		"streak"	"1"
-	}
+	//"HEADSHOT"
+	//{
+	//	"eventkey"	"headshot"
+	//	"type"		"kill"
+	//	"weapon"	"shotgun"
+	//	"mode"		"4"
+	//	"text"		"%a filled your head with lead"
+	//	"sound"		""
+	//	"streak"	"1"
+	//}
 	//"HEADSHOT"
 	//{
 	//	"eventkey"	"headshot"
@@ -189,29 +189,29 @@
 	//	"sound"		""
 		"streak"	"1"
 	}
-	"MULTIKILL"
-	{
-		"eventkey"	"multikill7"
-		"type"		"kill"
-		"mode"		"1"
-		"text"		"%a got a septuple kill!"
+	//"MULTIKILL"
+	//{
+	//	"eventkey"	"multikill7"
+	//	"type"		"kill"
+	//	"mode"		"1"
+	//	"text"		"%a got a septuple kill!"
 	//	"sound"		""
-		"streak"	"1"
-	}
-	"MULTIKILL"
-	{
-		"eventkey"	"multikill8"
-		"type"		"kill"
-		"mode"		"1"
-		"text"		"%a got an octuple kill!"
+	//	"streak"	"1"
+	//}
+	//"MULTIKILL"
+	//{
+	//	"eventkey"	"multikill8"
+	//	"type"		"kill"
+	//	"mode"		"1"
+	//	"text"		"%a got an octuple kill!"
 	//	"sound"		""
-		"streak"	"1"
-	}
+	//	"streak"	"1"
+	//}
 	"JIHAD"
 	{
 		"eventkey"	"jihad"
 		"type"		"kill"
-		"mode"		"1"
+		"mode"		"3"
 		"text"		"%a Kamikaze"
 		"sound"		"vo/citadel/br_youfool.wav"
 		"streak"	"1"
@@ -221,7 +221,7 @@
 		"eventkey"	"jihad2"
 		"type"		"kill"
 		"mode"		"1"
-		"text"		"JIHAD!"
+	//	"text"		"JIHAD!"
 		"sound"		"vo/npc/female01/gordead_ques02.wav"
 		"streak"	"1"
 	}
@@ -230,7 +230,7 @@
 		"eventkey"	"jihad3"
 		"type"		"kill"
 		"mode"		"1"
-		"text"		"JIHAD!"
+	//	"text"		"JIHAD!"
 		"sound"		"vo/npc/female01/gordead_ques02.wav"
 		"streak"	"1"
 	}
@@ -239,7 +239,7 @@
 		"eventkey"	"jihad4"
 		"type"		"kill"
 		"mode"		"1"
-		"text"		"JIHAD!"
+	//	"text"		"JIHAD!"
 		"sound"		"vo/npc/female01/gordead_ques02.wav"
 		"streak"	"1"
 	}
@@ -248,7 +248,7 @@
 		"eventkey"	"jihad5"
 		"type"		"kill"
 		"mode"		"1"
-		"text"		"JIHAD!"
+	//	"text"		"JIHAD!"
 		"sound"		"vo/npc/female01/gordead_ques02.wav"
 		"streak"	"1"
 	}
@@ -257,7 +257,7 @@
 		"eventkey"	"jihad6"
 		"type"		"kill"
 		"mode"		"1"
-		"text"		"JIHAD!"
+	//	"text"		"JIHAD!"
 		"sound"		"vo/npc/female01/gordead_ques02.wav"
 		"streak"	"1"
 	}
@@ -266,7 +266,7 @@
 		"eventkey"	"jihad7"
 		"type"		"kill"
 		"mode"		"1"
-		"text"		"JIHAD!"
+	//	"text"		"JIHAD!"
 		"sound"		"vo/npc/female01/gordead_ques02.wav"
 		"streak"	"1"
 	}
@@ -275,7 +275,7 @@
 		"eventkey"	"jihad8"
 		"type"		"kill"
 		"mode"		"1"
-		"text"		"JIHAD!"
+	//	"text"		"JIHAD!"
 		"sound"		"vo/npc/female01/gordead_ques02.wav"
 		"streak"	"1"
 	}
@@ -283,7 +283,7 @@
 	{
 		"eventkey"	"post_mortem"
 		"type"		"kill"
-		"mode"		"1"
+		"mode"		"2"
 		"text"		"%a Post-Mortem"
 	//	"sound"		""
 		"streak"	"1"
@@ -293,7 +293,7 @@
 	{
 		"eventkey"	"simultaneous"
 		"type"		"kill"
-		"mode"		"1"
+		"mode"		"2"
 		"text"		"%a and %v Simultaneous Kill!"
 	//	"sound"		""
 		"streak"	"1"
@@ -409,7 +409,7 @@
 	{
 		"eventkey"	"humiliation"
 		"type"		"death"
-		"weapon"	"weapon_stunstick"
+	//	"weapon"	"weapon_stunstick"
 		"streak"	"1"
 	}
 	//"HUMILIATION"

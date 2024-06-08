@@ -1,244 +1,364 @@
 #if defined _jhl2dm_included
-    #endinput
+  #endinput
 #endif
 #define _jhl2dm_included
 
-/**************************************************************************************************/
-
 #define MAX_MAP_LENGTH  32
 #define MAX_SAY_LENGTH  192
-#define COLOR_NORMAL      0xFFFFFF
-#define COLOR_INFORMATION 0xCCCCCC
-#define COLOR_HIGHLIGHT   0x00FF80
-#define COLOR_ERROR       0xFF2200
+#define TEAM_SPECTATORS 1
+#define TEAM_COMBINE    2
+#define TEAM_REBELS     3
+#define SPECMODE_FIRSTPERSON 4
+#define SPECMODE_THIRDPERSON 5
+#define SPECMODE_ENEMYVIEW   6
+#define SPECMODE_FREELOOK    7
 
-enum(+=1) {
-    TEAM_SPECTATORS = 1, TEAM_COMBINE, TEAM_REBELS,
-    SPECMODE_FIRSTPERSON, SPECMODE_THIRDPERSON, SPECMODE_ENEMYVIEW, SPECMODE_FREELOOK    
+// Does a string appear in a comma seperated list?
+stock bool IsItemInList(const char[] sItem, const char[] sList, bool bCaseSensitive=false)
+{   
+    if (!StrEqual(sList, sItem, bCaseSensitive))
+    {
+        char sFind[32];
+        
+        Format(sFind, sizeof(sFind), "%s,", sItem);
+        if (StrContains(sList, sFind, bCaseSensitive) != 0)
+        {
+            Format(sFind, sizeof(sFind), ",%s,", sItem);
+            if (StrContains(sList, sFind, bCaseSensitive) == -1)
+            {
+                int iLen;
+                
+                Format(sFind, sizeof(sFind), ",%s", sItem);
+                iLen = strlen(sList) - strlen(sFind);
+                if (iLen < 0) {
+                    iLen = 0;
+                }
+                
+                return StrEqual(sList[iLen], sFind, bCaseSensitive);
+            }
+        }
+    }
+    
+    return true;
 }
 
-/**************************************************************************************************/
+// Check for generic admin rights:
+stock bool IsClientAdmin(int iClient, int iFlag=ADMFLAG_GENERIC)
+{
+    return CheckCommandAccess(iClient, "generic_admin", iFlag, false);
+}
 
+// Return game server version:
 stock int GameVersion()
 {
-    static int version;
-    if(!version) {
-        char buffer[512];
-        ServerCommandEx(buffer, sizeof(buffer), "version");
-        SplitString(buffer[StrContains(buffer, "Server version:") + 16], "\n", buffer, sizeof(buffer));
-        version = StringToInt(buffer);
+    static int iVersion;
+
+    if (!iVersion)
+    {
+        char sVersion[512];
+
+        ServerCommandEx(sVersion, sizeof(sVersion), "version");
+        SplitString(sVersion[StrContains(sVersion, "Server version:") + 16], "\n", sVersion, sizeof(sVersion));
+        iVersion = StringToInt(sVersion);
     }
-    return version;
+
+    return iVersion;
 }
 
+// Return server tickrate:
 stock int Tickrate()
 {
-    static int tick;
-    if(!tick) {
-        tick = RoundToFloor(1.0 / GetTickInterval());
+    static int iRate;
+
+    if (!iRate) {
+        iRate = RoundToFloor(1.0 / GetTickInterval());
     }
-    return tick;
+
+    return iRate;
 }
 
-stock bool IsClientAdmin(int client, int type=ADMFLAG_GENERIC)
+// GetClientCount() with additional bot and spectator filters:
+stock int GetClientCount2(bool bInGameOnly=true, bool bIncludeBots=false, bool bIncludeSpectators=true)
 {
-    return CheckCommandAccess(client, "generic_admin", type, false);
-}
+    int iCount;
 
-stock char GetClientSteamID(int client, AuthIdType type=AuthId_Engine)
-{
-    char id[32];
-    GetClientAuthId(client, type, id, sizeof(id));
-    return id;
-}
-
-stock int GetRealClientCount(bool inGameOnly=true, bool includeBots=false, bool includeSpectators=true)
-{
-    int count;
-    for(int i = 1; i <= MaxClients; i++)
-    {
-        if(!IsClientConnected(i) || (inGameOnly && !IsClientInGame(i)) || (!includeBots && IsFakeClient(i)) || (!includeSpectators && IsClientObserver(i))) {
-            continue;
-        }
-        count++;
-    }
-    return count;
-}
-
-stock int GetClientVelocity(int client)
-{
-    float x, y, z;
-    x = GetEntDataFloat(client, FindSendPropInfo("CBasePlayer", "m_vecVelocity[0]"));
-    y = GetEntDataFloat(client, FindSendPropInfo("CBasePlayer", "m_vecVelocity[1]"));
-    z = GetEntDataFloat(client, FindSendPropInfo("CBasePlayer", "m_vecVelocity[2]"));
-    return RoundToNearest(SquareRoot(x * x + y * y + z * z));
-}
-
-stock bool IsItemDistinctInList(const char[] item, const char[] list, bool caseSensitive=false)
-{
-    char itemx[32];
-    int len;
-    
-    if(StrEqual(list, item, false)) {
-        return true;
-    }
-    
-    Format(itemx, sizeof(itemx), "%s,", item);
-    if(StrContains(list, itemx, false) == 0) {
-        return true;
-    }
-    
-    Format(itemx, sizeof(itemx), ",%s,", item);
-    if(StrContains(list, itemx, false) != -1) {
-        return true;
-    }
-    
-    Format(itemx, sizeof(itemx), ",%s", item);
-    
-    len = strlen(list) - strlen(itemx);
-    if(len < 0) {
-        len = 0;
-    }
-    
-    if(StrEqual(list[len], itemx, caseSensitive)) {
-        return true;
-    }
-    return false;
-}
-
-stock int ClientArgToTarget(int client, int arg, bool excludeBots=true)
-{
-    char buffer[MAX_NAME_LENGTH];
-    int target;
-    
-    GetCmdArg(arg, buffer, sizeof(buffer));
-    if(String_IsNumeric(buffer)) {
-        target = GetClientOfUserId(StringToInt(buffer));
-    }
-    
-    if(!target || !IsClientInGame(target) || IsFakeClient(target)) {
-        target = FindTarget(client, buffer, excludeBots, false);
-    }
-    return target;
-}
-
-stock int GetCmdArgInt(int arg)
-{
-    char buffer[192];
-    GetCmdArg(arg, buffer, sizeof(buffer));
-    return (StringToInt(buffer));
-}
-
-stock void ClientCommandAll(const char[] command, any...)
-{
-    char formatCmd[PLATFORM_MAX_PATH];
-    
-    VFormat(formatCmd, PLATFORM_MAX_PATH, command, 2);
     for (int i = 1; i <= MaxClients; i++)
     {
-        if(!IsClientInGame(i) || IsFakeClient(i)) {
+        if (!IsClientConnected(i) || (bInGameOnly && !IsClientInGame(i)) || (!bIncludeBots && IsFakeClient(i)) || (!bIncludeSpectators && IsClientObserver(i))) {
             continue;
         }
-        ClientCommand(i, formatCmd);
+
+        iCount++;
     }
+
+    return iCount;
 }
 
-stock int GetTopPlayer(bool ignoreBots=true)
+// Get player movement speed:
+stock int GetClientVelocity(int iClient)
 {
-    int best_score = -99, best_scorer;
-    bool tie;
-        
-    for(int i = 1; i <= MaxClients; i++)
+    float fVel[3];
+
+    fVel[0] = GetEntDataFloat(iClient, FindSendPropInfo("CBasePlayer", "m_vecVelocity[0]"));
+    fVel[1] = GetEntDataFloat(iClient, FindSendPropInfo("CBasePlayer", "m_vecVelocity[1]"));
+    fVel[2] = GetEntDataFloat(iClient, FindSendPropInfo("CBasePlayer", "m_vecVelocity[2]"));
+
+    return RoundToNearest(SquareRoot(fVel[0] * fVel[0] + fVel[1] * fVel[1] + fVel[2] * fVel[2]));
+}
+
+// Identify the winning player index:
+stock int GetTopPlayer(bool bIgnoreBots=true)
+{
+    int  iBestScore = -99;
+    int  iWinner;
+    bool bTie;
+
+    for (int i = 1; i <= MaxClients; i++)
     {
-        if(!IsClientConnected(i) || !IsClientInGame(i) || GetClientTeam(i) == TEAM_SPECTATORS) {
+        int iScore;
+
+        if (!IsClientConnected(i) || !IsClientInGame(i) || GetClientTeam(i) == TEAM_SPECTATORS || (IsFakeClient(i) && bIgnoreBots) ) {
             continue;
         }
-        
-        if(ignoreBots && IsFakeClient(i)) {
+
+        iScore = GetClientFrags(i);
+
+        if (iScore < iBestScore) {
             continue;
         }
-        
-        int score = GetClientFrags(i);
-            
-        if(score < best_score) {
-            continue;
+
+        if (iScore == iBestScore) {
+            bTie = true;
         }
-            
-        if(score == best_score) {
-            tie = true;
-        }
-            
-        if(score > best_score || (tie && GetClientDeaths(i) < GetClientDeaths(best_scorer))) {
-            best_score = score;
-            best_scorer = i;
-            tie = false;
+
+        if (iScore > iBestScore || (bTie && GetClientDeaths(i) < GetClientDeaths(iWinner)))
+        {
+            iBestScore = iScore;
+            iWinner = i;
+            bTie = false;
         }
     }
-        
-    if(tie) {
+
+    if (bTie) {
         return 0;
     }
-    
-    return best_scorer;
+
+    return iWinner;
 }
 
+// Identify the winning team index:
 stock int GetTopTeam()
 {
-    int r = GetTeamScore(TEAM_REBELS);
-    int c = GetTeamScore(TEAM_COMBINE);
-    return (r == c ? 0 : r > c ? r : c);
+    int iRebels  = GetTeamScore(TEAM_REBELS);
+    int iCombine = GetTeamScore(TEAM_COMBINE);
+
+    return (
+        iRebels > iCombine ? TEAM_REBELS
+      : iCombine > iRebels ? TEAM_COMBINE
+      : 0
+    );
 }
 
+// Execute command on all clients:
+stock void ClientCommandAll(const char[] sFormat, any...)
+{
+    char sCommand[PLATFORM_MAX_PATH];
 
-// clientprefs
+    VFormat(sCommand, PLATFORM_MAX_PATH, sFormat, 2);
+
+    for (int i = 1; i <= MaxClients; i++)
+    {
+        if (!IsClientInGame(i) || IsFakeClient(i)) {
+            continue;
+        }
+
+        ClientCommand(i, sCommand);
+    }
+}
+
+// Attempt to translate phrase (used by XMenuQuick):
+stock bool AttemptTranslation(char[] sPhrase, int iMaxlen, int iClient, bool bLogError=true)
+{
+    if (!TranslationPhraseExists(sPhrase))
+    {
+        if (bLogError) {
+            LogError("Translation \"%s\" not found!", sPhrase);
+        }
+
+        return false;
+    }
+
+    Format(sPhrase, iMaxlen, "%T", sPhrase, iClient);
+
+    return true;
+}
+
+// Constrain int/float between values:
+stock any clamp(any Value, any Min, any Max)
+{
+    return Value < Min ? Min : Value > Max ? Max : Value;
+}
+
+/**************************************************************
+ * MORECOLORS
+ *************************************************************/
+#if defined _more_colors_included
+  // Register N (normal), I (information), H (highlight), E (error) color codes:
+  stock void MC_AddJColors()
+  {
+      MC_AddColor("N", 0xFFFFFF);
+      MC_AddColor("I", 0xCCCCCC);
+      MC_AddColor("H", 0x00FF80);
+      MC_AddColor("E", 0xFF2200);
+  }
+  
+  // Fake a coloured message from client to recipient:
+  stock void PrintToChatFrom(int iClient, int iRecipient, bool bTeam, const char[] sFormat, any...)
+  {
+      char sMessage[512];
+
+      VFormat(sMessage, sizeof(sMessage), sFormat, 5);
+      PrintToChatEx(iRecipient, iClient, "%s{teamcolor}%N{default} :  %s", IsClientObserver(iClient) ? "*SPEC* " : bTeam ? IsClientObserver(iClient) ? "(Spectator)" : "(TEAM)" : NULL_STRING, iClient, sMessage);
+  }
+  
+  // Fake a coloured message from client to all:
+  stock void MC_PrintToChatAllFrom(int iClient, bool bTeam, const char[] sFormat, any...)
+  {
+      char sMessage[512];
+  
+      VFormat(sMessage, sizeof(sMessage), sFormat, 4);
+  
+      if (iClient != 0)
+      {
+          for (int i = 1; i <= MaxClients; i++)
+          {
+              if (!IsClientConnected(i) || !IsClientInGame(i) || IsFakeClient(i)) {
+                  continue;
+              }
+  
+              if (bTeam && GetClientTeam(iClient) != GetClientTeam(i)) {
+                  continue;
+              }
+  
+              MC_PrintToChatFrom(iClient, i, bTeam, sMessage);
+          }
+      }
+      else {
+          MC_PrintToChatAll(sMessage);
+      }
+  }
+#endif
+
+/**************************************************************
+ * CLIENTPREFS
+ *************************************************************/
 #if defined _clientprefs_included
 
-stock int GetClientCookieInt(int client, Handle cookie, int minBound=-9999, int maxBound=9999)
-{
-    char buffer[8];
-    GetClientCookie(client, cookie, buffer, sizeof(buffer));
-    
-    int result = StringToInt(buffer);
-    return(result < minBound ? minBound : result > maxBound ? maxBound : result);
-}
+  // Does cookie have value
+  stock bool ClientCookieHasValue(int iClient, Handle hCookie)
+  {
+      char sCookie[2];
+      GetClientCookie(iClient, hCookie, sCookie, sizeof(sCookie));
+      
+      if (sCookie[0] == '\0') {
+          return false;
+      }
+      
+      return true;
+  }
 
+  // Get cookie boolean value
+  stock bool GetClientCookieBool(Handle hCookie, int iClient, bool bUnset=true)
+  {
+      if (!IsClientConnected(iClient) || !IsClientInGame(iClient) || IsFakeClient(iClient)) {
+          return false;
+      }
+
+      if (!AreClientCookiesCached(iClient) && !bUnset) {
+          return false;
+      }
+
+      return (GetClientCookieInt(iClient, hCookie) >= 1);
+  }
+
+  // Get cookie int value
+  stock int GetClientCookieInt(int iClient, Handle hCookie)
+  {
+      char sCookie[8];
+      GetClientCookie(iClient, hCookie, sCookie, sizeof(sCookie));
+      
+      return StringToInt(sCookie);
+  }
+  
+  // Set cookie int value
+  stock void SetClientCookieInt(int iClient, Handle hCookie, int iValue)
+  {
+      char sValue[8];
+      IntToString(iValue, sValue, sizeof(sValue));
+      
+      SetClientCookie(iClient, hCookie, sValue);
+  }
 #endif
 
+/**************************************************************
+ * Unbuffered string stuff
+ *************************************************************/
 
-// morecolors
-#if defined _more_colors_included
-
-stock void MC_PrintToChatFrom(int client, int recipient, bool team, const char[] message, any...)
+// Return number:
+stock char[] IntToChar(int iValue)
 {
-    char fmessage[512];
-    VFormat(fmessage, sizeof(fmessage), message, 5);
-        
-    MC_PrintToChatEx(recipient, client, "%s{teamcolor}%N{default} :  %s", IsClientObserver(client) ? "*SPEC* " : team ? IsClientObserver(client) ? "(Spectator)" : "(TEAM)" : NULL_STRING, client, fmessage);
-}
+    char sValue[32];
+    IntToString(iValue, sValue, sizeof(sValue));
     
-stock void MC_PrintToChatAllFrom(int client, bool team, const char[] message, any...)
+    return sValue;
+}
+
+// Return steam id:
+stock char[] AuthId(int iClient, AuthIdType iType=AuthId_Engine)
 {
-    char fmessage[512];
-    VFormat(fmessage, sizeof(fmessage), message, 4);
-        
-    if(client != 0)
+    char sId[32];
+    GetClientAuthId(iClient, iType, sId, sizeof(sId));
+    
+    return sId;
+}
+
+// Return formatted time:
+stock char[] Timestring(float fTime, bool bFloatingSeconds=false, bool bClockStyle=false)
+{
+    int  iHours   = RoundToNearest(fTime) / 3600;
+    int  iSeconds = RoundToNearest(fTime) % 60;
+    int  iMinutes = RoundToNearest(fTime) / 60 - (iHours ? (iHours * 60) : 0);
+    int  iDays    = RoundToFloor(float(iHours / 24));
+    char sTime[32];
+
+    if (!iHours)
     {
-        for (int i = 1; i <= MaxClients; i++)
-        {
-            if(!IsClientConnected(i) || !IsClientInGame(i) || IsFakeClient(i)) {
-                continue;
-            }
-            
-            if(team && GetClientTeam(client) != GetClientTeam(i)) {
-                continue;
-            }
-            
-            MC_PrintToChatFrom(client, i, team, fmessage);
+        if (fTime >= 60) {
+            Format(sTime, sizeof(sTime), "%i%s%02i%s", iMinutes, bClockStyle ? ":" : "m ", iSeconds, bClockStyle ? "" : "s");
+        }
+        else if (!bFloatingSeconds) {
+            Format(sTime, sizeof(sTime), "%i%s", RoundToNearest(fTime), bClockStyle ? "" : "s");
+        }
+        else {
+            Format(sTime, sizeof(sTime), "%s%.1f", sTime, fTime);
         }
     }
-    else {
-        MC_PrintToChatAll(fmessage);
+    else
+    {
+        if (iDays) {
+            iHours -= iDays * 24;
+            Format(sTime, sizeof(sTime), "%id ", iDays);
+        }
+        Format(sTime, sizeof(sTime), "%s%ih %i%s%02i%s", sTime, iHours, iMinutes, bClockStyle ? ":" : "m ", iSeconds, bClockStyle ? "" : "s");
     }
+
+    return sTime;
 }
 
-#endif
+// Convert number to larger symbol (used in vote hud):
+stock char[] BigNumber(int iValue)
+{
+    char sBigNums[10][4] = { "０", "１", "２", "３", "４", "５", "６", "７", "８", "９" };
+    
+    return sBigNums[iValue];
+}

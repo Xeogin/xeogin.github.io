@@ -15,17 +15,17 @@ WeaponData
 	"clip_size"				"45"
 	"clip2_size"			"-1"
 
-	"default_clip"			"45"
+	"default_clip"			"225"
 	"default_clip2"			"-1"
 
 	"primary_ammo"			"SMG1"
 	"secondary_ammo"		"SMG1_Grenade"
 
-	"weight"				"4"
+	"weight"				"4" //Def. 3
 	"rumble"				"3"
-	"item_flags"			"32"
-	"damage"				"8"
-	"autoswitchfrom"		"1"
+	"item_flags"			"32" //Def. 0
+	"damage"				"7" //Def. 5
+	"autoswitchfrom"		"1" //Def. 0
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

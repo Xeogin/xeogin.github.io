@@ -21,9 +21,9 @@ WeaponData
 	"primary_ammo"			"rpg_round"
 	"secondary_ammo"		"None"
 
-	"weight"				"3"
-	"item_flags"			"32"
-	"damage"				"150" //170 Def. 250?
+	"weight"				"3" //Def. 0
+	"item_flags"			"0" //Def. 0
+	"damage"				"150"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

@@ -13,7 +13,7 @@ WeaponData
 	"bucket_position_360"	"1"
 
 	"clip_size"				"6"
-	"default_clip"			"30"
+	"default_clip"			"12" // Def. 6
 
 	"primary_ammo"			"Buckshot"
 	"secondary_ammo"		"None"

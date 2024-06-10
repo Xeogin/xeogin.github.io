@@ -15,7 +15,7 @@ WeaponData
 	"clip_size"				"45"
 	"clip2_size"			"-1"
 
-	"default_clip"			"225"
+	"default_clip"			"135" // Def. 45
 	"default_clip2"			"-1"
 
 	"primary_ammo"			"SMG1"

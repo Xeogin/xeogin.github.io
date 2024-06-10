@@ -12,8 +12,8 @@ WeaponData
 	"bucket_360"			"1"
 	"bucket_position_360"	"2"
 
-	"clip_size"				"30"
-	"default_clip"			"90"
+	"clip_size"				"30" // Def. 30
+	"default_clip"			"90" // Def. 60
 
 	"clip2_size"			"-1"
 	"default_clip2"			"-1"
@@ -23,7 +23,7 @@ WeaponData
 
 	"weight"				"6" //Def. 5
 	"rumble"				"4"
-	"item_flags"			"32" //Def. 0
+	"item_flags"			"0" //Def. 0
 	"damage"				"15" //Def. 11
 	"autoswitchfrom"		"1" //Def. 0
 

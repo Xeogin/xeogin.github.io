@@ -12,14 +12,14 @@ WeaponData
 	"bucket_360"			"0"
 	"bucket_position_360"	"0"
 
-	"clip_size"				"18"
+	"clip_size"				"18" //Def. 18
 	"primary_ammo"			"Pistol"
 	"secondary_ammo"		"None"
-	"default_clip"			"152" //Def. -1?
+	"default_clip"			"150" //Def. 150
 
 	"weight"				"2"
 	"rumble"				"1"
-	"item_flags"			"32" //Def. 0
+	"item_flags"			"0" //Def. 0
 	"damage"				"12" //Def. 8
 	"autoswitchfrom"		"1" //Def. 0
 

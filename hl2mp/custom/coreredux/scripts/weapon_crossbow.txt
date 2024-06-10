@@ -14,7 +14,7 @@ WeaponData
 
 	//To make fast-fire with no ammo counter, comment out "default_clip" & "primary_ammo" then set "clip_size" to a large value, like 999 for near infinite
 	"clip_size"				"1"
-	"default_clip"			"11" //Def. 5
+	"default_clip"			"6" //Def. 5
 	"default_clip2" 		"-1"
 	"primary_ammo"			"XBowBolt"
 	"secondary_ammo"		"None"

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<mods>
+	<urls mod="DOD:S">
+		<url href="https://raw.githubusercontent.com/alliedmodders/sourcemod/master/gamedata/sdktools.games/game.dod.txt">
+			<key hookinfoname="runplayermove_dods" name="PlayerRunCmd"/>
+		</url>
+	</urls>
+</mods>

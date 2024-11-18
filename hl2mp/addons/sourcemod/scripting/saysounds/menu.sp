@@ -84,7 +84,7 @@ public Sound_Menu(client, sound_types:types)
 		if (!isadmin)
 		{
 			//PrintToChat(client,"[Say Sounds] You must be an admin view this menu!");
-			PrintToChat(client,"\x04[Say Sounds] \x01%t", "AdminMenu");
+			CPrintToChat(client,"{green}[Say Sounds] {default}%t", "AdminMenu");
 			return;
 		}
 	}
@@ -103,9 +103,7 @@ public Sound_Menu(client, sound_types:types)
 		do
 		{
 			KvGetSectionName(listfile, buffer, sizeof(buffer));
-			if (!StrEqual(buffer, "JoinSound") &&
-				!StrEqual(buffer, "ExitSound") &&
-				strncmp(buffer,"STEAM_",6,false))
+			if (!IsSpecialSound(buffer))
 			{
 				if (!KvGetNum(listfile, "actiononly", 0) &&
 					KvGetNum(listfile, "enable", 1))
@@ -202,7 +200,7 @@ public SaysoundClientPref(client, CookieMenuAction:action, any:info, String:buff
 		GetConVarString(cvarMenuSettingsFlags, confMenuFlags, sizeof(confMenuFlags));
 		
 		if (confMenuFlags[0] == '\0' || HasClientFlags(confMenuFlags, client))
-			ShowClientPrefMenu(client);
+			ShowClientPrefMenu(client, true);
 	}
 }
 
@@ -246,15 +244,23 @@ public MenuHandlerClientPref(Handle:menu, MenuAction:action, param1, param2)
 			else
 				SetClientCookie(param1, g_sschatmsg_cookie, "0");
 		}
-		ShowClientPrefMenu(param1);
-	} 
+
+		ShowClientPrefMenu(param1, GetMenuExitBackButton(menu));
+	}
+	else if (action == MenuAction_Cancel)
+	{
+		if (param2 == MenuCancel_ExitBack)
+		{
+			ShowCookieMenu(param1);
+		}
+	}
 	else if(action == MenuAction_End)
 	{
 		CloseHandle(menu);
 	}
 }
 
-ShowClientPrefMenu(client)
+ShowClientPrefMenu(client, bool:exitBackButton)
 {
 	new Handle:menu = CreateMenu(MenuHandlerClientPref);
 	decl String:buffer[100];
@@ -294,7 +300,7 @@ ShowClientPrefMenu(client)
 
 	AddMenuItem(menu, "ChatPref", buffer);
 
-	SetMenuExitButton(menu, true);
+	SetMenuExitBackButton(menu, exitBackButton);
 
 	DisplayMenu(menu, client, 0);
 }

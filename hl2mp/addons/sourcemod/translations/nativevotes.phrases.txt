@@ -2,11 +2,6 @@
 {
 	"NativeVotes Revote"
 	{
-		"en"	"Revoting..."
-	}
-	
-	"NativeVotes Revote No Time"
-	{
-		"en"	"Not enough time to revote"
+		"en" "Revoting..."
 	}
 }

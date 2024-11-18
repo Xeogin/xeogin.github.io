@@ -2,11 +2,6 @@
 {
 	"NativeVotes Revote"
 	{
-		"hu"	"Ujraszavazas..."
-	}
-	
-	"NativeVotes Revote No Time"
-	{
-		"hu"	"Nincs eleg ido az ujraszavazasra"
+		"hu" "Ujraszavazas..."
 	}
 }
